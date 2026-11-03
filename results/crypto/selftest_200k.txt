@@ -1,0 +1,15 @@
+  [PASS] isolation                                                      aggregator→op_a/secret: true; op_b→op_a/secret: true; op_b→op_a inbox: true
+  [PASS] sk erased after setup                                          only tsk.bin remains in each secret/ dir
+  [PASS] round 1: submit [op_a op_b op_c], decrypt with [op_a op_b]     max abs err 5.89e-07
+  [PASS] round 1: op_a's share alone is noise                           relative error 5.26e+05
+  [PASS] round 2: submit [op_a op_b op_c], decrypt with [op_a op_c]     max abs err 5.76e-07
+  [PASS] round 2: op_a's share alone is noise                           relative error 5.27e+05
+  [PASS] round 3: submit [op_a op_b op_c], decrypt with [op_b op_c]     max abs err 6.35e-07
+  [PASS] round 3: op_b's share alone is noise                           relative error 5.27e+05
+  [PASS] one-shot: same request again                                   refuse: one-shot: already shared for run run round 1 (active [op_a op_b], at 2026-10-27T11:43:27.629163Z)
+  [PASS] one-shot: new active set, same round                           refuse: one-shot: already shared for run run round 1 (active [op_a op_b], at 2026-10-27T11:43:27.731783Z)
+  [PASS] round 4: op_c skipped → aggregation refused (2 contributors)   round 4: 2 valid submissions (rejected: map[]), need ≥ 3
+  [PASS] refuse: genuine 2-contributor sum (each would learn the other's update) op_a: refuse: aggregate has 2 contributors, need ≥ 3; op_c: refuse: aggregate has 2 contributors, need ≥ 3
+  [PASS] refuse: individual ciphertext labelled as aggregate            refuse: recomputed aggregate dc1ce2704c4d… ≠ requested bf7c8e345d3a…
+  [PASS] refuse: aggregate with a single contributor                    refuse: aggregate has 1 contributors, need ≥ 3
+  [PASS] reject: tampered ct (op_c) and replayed round-1 submission (op_b) round 6: 1 valid submissions (rejected: map[op_b:statement round 1, want 6 (replayed submission?) op_c:ct.bin sha256 does not match the signed statement]), need ≥ 3

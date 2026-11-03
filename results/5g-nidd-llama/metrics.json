@@ -1,0 +1,170 @@
+{
+  "source_files": [
+    "E0.json",
+    "E1a.json",
+    "E1b.json",
+    "E1c.json",
+    "E2.json",
+    "E3.json",
+    "E4.json"
+  ],
+  "recall": {
+    "E0": {
+      "benign": 0.17333333333333334,
+      "udp_flood": 1.0,
+      "icmp_flood": 0.05825242718446602,
+      "syn_flood": 0.0,
+      "http_flood": 0.0,
+      "slowrate_dos": 0.0,
+      "syn_scan": 0.0,
+      "tcp_connect_scan": 0.0,
+      "udp_scan": 0.08108108108108109
+    },
+    "E1a": {
+      "benign": 0.9533333333333334,
+      "udp_flood": 1.0,
+      "icmp_flood": 1.0,
+      "syn_flood": 0.0,
+      "http_flood": 0.0,
+      "slowrate_dos": 0.0,
+      "syn_scan": 0.92,
+      "tcp_connect_scan": 0.07692307692307693,
+      "udp_scan": 0.0
+    },
+    "E1b": {
+      "benign": 0.98,
+      "udp_flood": 0.0,
+      "icmp_flood": 0.0,
+      "syn_flood": 0.0,
+      "http_flood": 1.0,
+      "slowrate_dos": 0.98,
+      "syn_scan": 0.0,
+      "tcp_connect_scan": 0.9807692307692307,
+      "udp_scan": 0.0
+    },
+    "E1c": {
+      "benign": 0.9666666666666667,
+      "udp_flood": 0.0,
+      "icmp_flood": 0.0,
+      "syn_flood": 0.9933333333333333,
+      "http_flood": 0.0,
+      "slowrate_dos": 0.0,
+      "syn_scan": 0.95,
+      "tcp_connect_scan": 0.0,
+      "udp_scan": 0.8468468468468469
+    },
+    "E3": {
+      "benign": 0.9866666666666667,
+      "udp_flood": 1.0,
+      "icmp_flood": 0.9902912621359223,
+      "syn_flood": 0.9933333333333333,
+      "http_flood": 0.8933333333333333,
+      "slowrate_dos": 0.9466666666666667,
+      "syn_scan": 0.92,
+      "tcp_connect_scan": 0.7692307692307693,
+      "udp_scan": 0.8468468468468469
+    },
+    "E4": {
+      "benign": 1.0,
+      "udp_flood": 1.0,
+      "icmp_flood": 1.0,
+      "syn_flood": 0.9933333333333333,
+      "http_flood": 1.0,
+      "slowrate_dos": 0.9866666666666667,
+      "syn_scan": 0.93,
+      "tcp_connect_scan": 0.9038461538461539,
+      "udp_scan": 0.8468468468468469
+    },
+    "E2": {
+      "benign": 0.9933333333333333,
+      "udp_flood": 1.0,
+      "icmp_flood": 0.9611650485436893,
+      "syn_flood": 0.9933333333333333,
+      "http_flood": 0.8266666666666667,
+      "slowrate_dos": 0.9333333333333333,
+      "syn_scan": 0.93,
+      "tcp_connect_scan": 0.7692307692307693,
+      "udp_scan": 0.8468468468468469
+    }
+  },
+  "macro_f1": {
+    "E0": 0.0493289040391978,
+    "E1a": 0.26594952276324296,
+    "E1b": 0.31964678354010717,
+    "E1c": 0.3125181789426922,
+    "E3": 0.929834620238545,
+    "E4": 0.9594506568070221,
+    "E2": 0.9173461134355176
+  },
+  "accuracy": {
+    "E0": 0.07314629258517034,
+    "E1a": 0.374749498997996,
+    "E1b": 0.49599198396793587,
+    "E1c": 0.48396793587174347,
+    "E3": 0.9348697394789579,
+    "E4": 0.9679358717434869,
+    "E2": 0.9218436873747495
+  },
+  "blind_spot_recall": {
+    "op_a": {
+      "classes": [
+        "syn_flood",
+        "http_flood",
+        "slowrate_dos",
+        "tcp_connect_scan",
+        "udp_scan"
+      ],
+      "local": 0.015384615384615385,
+      "horizon_E3": 0.8898821898821898
+    },
+    "op_b": {
+      "classes": [
+        "udp_flood",
+        "icmp_flood",
+        "syn_flood",
+        "syn_scan",
+        "udp_scan"
+      ],
+      "local": 0.0,
+      "horizon_E3": 0.9500942884632204
+    },
+    "op_c": {
+      "classes": [
+        "udp_flood",
+        "icmp_flood",
+        "http_flood",
+        "slowrate_dos",
+        "tcp_connect_scan"
+      ],
+      "local": 0.0,
+      "horizon_E3": 0.9199044062733384
+    },
+    "mean": {
+      "local": 0.005128205128205128,
+      "horizon_E3": 0.9199602948729163
+    }
+  },
+  "blind_spot_classes": {
+    "op_a": [
+      "syn_flood",
+      "http_flood",
+      "slowrate_dos",
+      "tcp_connect_scan",
+      "udp_scan"
+    ],
+    "op_b": [
+      "udp_flood",
+      "icmp_flood",
+      "syn_flood",
+      "syn_scan",
+      "udp_scan"
+    ],
+    "op_c": [
+      "udp_flood",
+      "icmp_flood",
+      "http_flood",
+      "slowrate_dos",
+      "tcp_connect_scan"
+    ]
+  }
+}

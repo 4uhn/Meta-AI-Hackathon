@@ -1,0 +1,62 @@
+{
+ "n_test": 998,
+ "n_train_val": 3779,
+ "fields_per_row": {
+  "15": 4777
+ },
+ "exact_overlap": 0,
+ "k1": {
+  "near_dup_same_label": 324,
+  "near_dup_other_label_only": 8,
+  "share_of_test": 0.3327,
+  "per_class": {
+   "benign|same": 2,
+   "icmp_flood|same": 90,
+   "syn_flood|same": 14,
+   "syn_scan|other_label_only": 4,
+   "syn_scan|same": 74,
+   "tcp_connect_scan|other_label_only": 2,
+   "tcp_connect_scan|same": 21,
+   "udp_flood|same": 25,
+   "udp_scan|other_label_only": 2,
+   "udp_scan|same": 98
+  },
+  "top_differing_fields": {
+   "ttl": 183,
+   "rate": 106,
+   "dur": 39,
+   "win": 4
+  }
+ },
+ "k2": {
+  "near_dup_same_label": 564,
+  "near_dup_other_label_only": 24,
+  "share_of_test": 0.5892,
+  "per_class": {
+   "benign|same": 39,
+   "http_flood|other_label_only": 5,
+   "http_flood|same": 19,
+   "icmp_flood|same": 102,
+   "slowrate_dos|other_label_only": 1,
+   "slowrate_dos|same": 4,
+   "syn_flood|same": 142,
+   "syn_scan|other_label_only": 6,
+   "syn_scan|same": 90,
+   "tcp_connect_scan|other_label_only": 5,
+   "tcp_connect_scan|same": 32,
+   "udp_flood|same": 32,
+   "udp_scan|other_label_only": 7,
+   "udp_scan|same": 104
+  },
+  "top_differing_fields": {
+   "dur,rate": 184,
+   "proto,ttl": 181,
+   "proto,rate": 106,
+   "proto,dur": 39,
+   "rtt,synack": 31,
+   "rtt,ackdat": 13,
+   "synack,ackdat": 12,
+   "rate,ttl": 6
+  }
+ }
+}

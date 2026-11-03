@@ -1,0 +1,75 @@
+{
+  "exp": "E0",
+  "model": "unsloth/Muse-Glimmer-30B-unsloth-bnb-4bit",
+  "revision": "ecedda395d4d099b477d135a9a573eedaa5a7aad",
+  "epochs": 3.0,
+  "layout_hash": "b70279f42d0d61b57e5da9a0394266988bd7ad8de5bd9ff9148b41d97203bc7d",
+  "a_hash": "52ab8e6ef455d7565184ecab17f377ad7e2e8eb1ce447f0af40c27d1e95713a3",
+  "lr": 0.0005,
+  "dtype": "bfloat16",
+  "smoke": false,
+  "metrics": {
+    "accuracy": 0.39111111111111113,
+    "macro_f1": 0.36361972812197774,
+    "per_class": {
+      "equipment_failure": {
+        "recall": 0.78,
+        "precision": 0.22478386167146974,
+        "f1": 0.348993288590604,
+        "support": 100
+      },
+      "traffic_conflict": {
+        "recall": 0.82,
+        "precision": 0.36444444444444446,
+        "f1": 0.5046153846153846,
+        "support": 100
+      },
+      "ground_conflict": {
+        "recall": 0.05,
+        "precision": 0.625,
+        "f1": 0.09259259259259259,
+        "support": 100
+      },
+      "turbulence": {
+        "recall": 0.1,
+        "precision": 0.8333333333333334,
+        "f1": 0.17857142857142858,
+        "support": 100
+      },
+      "terrain_warning": {
+        "recall": 0.36,
+        "precision": 0.6428571428571429,
+        "f1": 0.4615384615384615,
+        "support": 100
+      },
+      "airspace_violation": {
+        "recall": 0.32,
+        "precision": 0.6153846153846154,
+        "f1": 0.4210526315789474,
+        "support": 100
+      },
+      "loss_of_control": {
+        "recall": 0.59,
+        "precision": 0.39864864864864863,
+        "f1": 0.47580645161290325,
+        "support": 100
+      },
+      "hazmat": {
+        "recall": 0.2,
+        "precision": 0.9090909090909091,
+        "f1": 0.32786885245901637,
+        "support": 100
+      },
+      "passenger_misconduct": {
+        "recall": 0.3,
+        "precision": 1.0,
+        "f1": 0.4615384615384615,
+        "support": 100
+      }
+    },
+    "eval_ms": 1219529,
+    "mps_peak_gb": 0.0
+  },
+  "n_test": 900,
+  "pred_sha256": "1fe8a7648430482ef4100eb30283d8da4400a75db7c57e86eb84da96485ee1c7"
+}

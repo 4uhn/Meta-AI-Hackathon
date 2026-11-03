@@ -1,0 +1,39 @@
+    acceptance_test.go:89: T1: 49169 values, max abs err 1.94e-16 (bound 2.22e-07)
+--- PASS: TestT1SinglePartyRoundtrip (0.04s)
+    acceptance_test.go:107: T2: op_a+op_b over 100000 values (7 ciphertexts): max abs err 6.08e-07
+    acceptance_test.go:107: T2: op_a+op_c over 100000 values (7 ciphertexts): max abs err 6.56e-07
+    acceptance_test.go:107: T2: op_b+op_c over 100000 values (7 ciphertexts): max abs err 6.04e-07
+--- PASS: TestT2ThreeParty100k (0.14s)
+    acceptance_test.go:126: T3: op_a alone: relative error 3.87e+04
+    acceptance_test.go:126: T3: op_b alone: relative error 3.89e+04
+    acceptance_test.go:126: T3: op_c alone: relative error 3.86e+04
+--- PASS: TestT3SoloShareGarbage (0.07s)
+    acceptance_test.go:156: T4: 10000000 values (611 ciphertexts), max abs err 7.18e-07 = 2^-20.4 (20.4 bits after the binary point)
+--- PASS: TestT4TenMillion (5.79s)
+    acceptance_test.go:192: T5: sk            262176 bytes, byte-identical
+    acceptance_test.go:194: T5: tsk           262176 bytes, byte-identical
+    acceptance_test.go:200: T5: pk-share      262176 bytes, byte-identical
+    acceptance_test.go:202: T5: pk            524360 bytes, byte-identical
+    acceptance_test.go:220: T5: ct list      1573898 bytes, byte-identical (3 ciphertexts)
+    acceptance_test.go:223: T5: tsk(b)        262176 bytes, byte-identical
+    acceptance_test.go:254: T5: decrypt from deserialised artefacts OK (max abs err 6.58e-07)
+--- PASS: TestT5Serialisation (0.04s)
+    acceptance_test.go:295: aggregate sha256 identical for every order: 42e2454c35e15b82…
+--- PASS: TestAggregateCanonical (0.07s)
+    acceptance_test.go:379: max |M[j][k]| = 1/N → row L1 ≤ 1.000
+--- PASS: TestCIEmbeddingRowNorm (2.23s)
+    noise_test.go:50: B_ct bound (3 submissions, fail ≤ 2^-80/coeff) = 927818 = 2^19.82; flood width = 2^85
+    noise_test.go:103: measured noise over 131072 coefficients: std = 2008.6 (2^10.97), max |e| = 9805 (2^13.26); bound/max = 2^6.6
+--- PASS: TestCiphertextNoiseUnderBound (0.24s)
+--- PASS: TestFloodCentreResidue (0.01s)
+    noise_test.go:193: flood width 2^85: 131072 samples, chi² (63 dof) = 42.1, mean/2^(w−1) = -0.0009
+--- PASS: TestFloodIsUniform (0.08s)
+    noise_test.go:222: sweep: log Δ = 108, headroom Q/2Δ = 2048, max abs err 4.30e-05 over 327680 values
+    noise_test.go:222: sweep: log Δ = 110, headroom Q/2Δ = 512, max abs err 1.01e-05 over 327680 values
+    noise_test.go:222: sweep: log Δ = 112, headroom Q/2Δ = 128, max abs err 2.71e-06 over 327680 values
+    noise_test.go:222: sweep: log Δ = 113, headroom Q/2Δ = 64, max abs err 1.40e-06 over 327680 values
+    noise_test.go:222: sweep: log Δ = 114, headroom Q/2Δ = 32, max abs err 6.28e-07 over 327680 values
+    noise_test.go:211: sweep: log Δ = 115 rejected: LogScale 115 leaves headroom 2^4 under LogQ [60 60], need > 24
+    noise_test.go:211: sweep: log Δ = 116 rejected: LogScale 116 leaves headroom 2^3 under LogQ [60 60], need > 24
+--- PASS: TestScaleSweep (1.48s)
+ok  	github.com/4uhn/Meta-AI-Hackathon/crypto/internal/he	10.391s

@@ -1,0 +1,86 @@
+{
+  "exp": "E1b",
+  "model": "unsloth/Muse-Glimmer-30B-unsloth-bnb-4bit",
+  "revision": "ecedda395d4d099b477d135a9a573eedaa5a7aad",
+  "epochs": 3.0,
+  "layout_hash": "b70279f42d0d61b57e5da9a0394266988bd7ad8de5bd9ff9148b41d97203bc7d",
+  "a_hash": "52ab8e6ef455d7565184ecab17f377ad7e2e8eb1ce447f0af40c27d1e95713a3",
+  "lr": 0.0005,
+  "dtype": "bfloat16",
+  "smoke": false,
+  "train": {
+    "steps": 240,
+    "n": 1273,
+    "loss_first": 0.41801918745040895,
+    "loss_last": 0.050350110651925205,
+    "ms": 2001743,
+    "ms_per_step": 8340,
+    "mps_peak_gb": 0.0,
+    "cuda_peak_gb": 27.68
+  },
+  "b_max_abs": 0.03630742430686951,
+  "metrics": {
+    "accuracy": 0.7855555555555556,
+    "macro_f1": 0.75948859061134,
+    "per_class": {
+      "equipment_failure": {
+        "recall": 0.95,
+        "precision": 0.5277777777777778,
+        "f1": 0.6785714285714285,
+        "support": 100
+      },
+      "traffic_conflict": {
+        "recall": 0.79,
+        "precision": 0.8681318681318682,
+        "f1": 0.8272251308900523,
+        "support": 100
+      },
+      "ground_conflict": {
+        "recall": 0.93,
+        "precision": 0.6838235294117647,
+        "f1": 0.788135593220339,
+        "support": 100
+      },
+      "turbulence": {
+        "recall": 0.87,
+        "precision": 0.7767857142857143,
+        "f1": 0.820754716981132,
+        "support": 100
+      },
+      "terrain_warning": {
+        "recall": 0.88,
+        "precision": 0.8,
+        "f1": 0.8380952380952381,
+        "support": 100
+      },
+      "airspace_violation": {
+        "recall": 0.76,
+        "precision": 0.9620253164556962,
+        "f1": 0.8491620111731845,
+        "support": 100
+      },
+      "loss_of_control": {
+        "recall": 0.08,
+        "precision": 1.0,
+        "f1": 0.14814814814814814,
+        "support": 100
+      },
+      "hazmat": {
+        "recall": 0.89,
+        "precision": 0.978021978021978,
+        "f1": 0.9319371727748691,
+        "support": 100
+      },
+      "passenger_misconduct": {
+        "recall": 0.92,
+        "precision": 0.989247311827957,
+        "f1": 0.9533678756476685,
+        "support": 100
+      }
+    },
+    "eval_ms": 1209830,
+    "mps_peak_gb": 0.0
+  },
+  "n_test": 900,
+  "pred_sha256": "767f4db62985e8b4268edd32b8255fc3805af432541f8d4f236ab0a582e042b0"
+}

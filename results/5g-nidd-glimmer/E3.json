@@ -1,0 +1,953 @@
+{
+  "exp": "E3",
+  "mode": "encrypted",
+  "scenario": "none",
+  "run": "runs/modal_glimmer_E3",
+  "backend": "modal",
+  "ceremony": {
+    "ms": 278
+  },
+  "model": "unsloth/Muse-Glimmer-30B-unsloth-bnb-4bit",
+  "base_revision": "ecedda395d4d099b477d135a9a573eedaa5a7aad",
+  "layout_hash": "b70279f42d0d61b57e5da9a0394266988bd7ad8de5bd9ff9148b41d97203bc7d",
+  "lora_A_hash": "52ab8e6ef455d7565184ecab17f377ad7e2e8eb1ce447f0af40c27d1e95713a3",
+  "n_values": 4685825,
+  "rounds": [
+    {
+      "round": 1,
+      "active": [
+        "op_a",
+        "op_b"
+      ],
+      "contributors": [
+        "op_a",
+        "op_b",
+        "op_c"
+      ],
+      "rejected": {},
+      "aggregate_ms": 9.558,
+      "agg_bytes": 150568818,
+      "dec_share_ms": {
+        "op_a": 836,
+        "op_b": 798
+      },
+      "combine_ms": 339.738,
+      "solo_rel_err": 4371119.711436853,
+      "weight_sum": 0.34009981885707163,
+      "close_ms": 3875,
+      "skipped_training": [],
+      "manifests": {
+        "op_a": {
+          "run_id": "modal_glimmer_E3",
+          "round": 1,
+          "operator": "op_a",
+          "layout_hash": "b70279f42d0d61b57e5da9a0394266988bd7ad8de5bd9ff9148b41d97203bc7d",
+          "lora_A_hash": "52ab8e6ef455d7565184ecab17f377ad7e2e8eb1ce447f0af40c27d1e95713a3",
+          "base_revision": "ecedda395d4d099b477d135a9a573eedaa5a7aad",
+          "n_values": 4685825,
+          "train_examples": 867,
+          "train_loss_final": 0.12543951775878667,
+          "train_ms": 104748,
+          "train_steps": 28,
+          "mps_peak_gb": 0.0,
+          "mode": "encrypted",
+          "n_ciphertexts": 287,
+          "ct_sha256": "31dca47c1a90e710110fe7ef465a58d1714f3e1bf93f695d421a11af56b9cdd2",
+          "bytes": 150568818,
+          "expansion_vs_fp16": 16.066414985621527,
+          "encrypt_ms": 445.854,
+          "created_at": "2026-10-29T20:26:01Z"
+        },
+        "op_b": {
+          "run_id": "modal_glimmer_E3",
+          "round": 1,
+          "operator": "op_b",
+          "layout_hash": "b70279f42d0d61b57e5da9a0394266988bd7ad8de5bd9ff9148b41d97203bc7d",
+          "lora_A_hash": "52ab8e6ef455d7565184ecab17f377ad7e2e8eb1ce447f0af40c27d1e95713a3",
+          "base_revision": "ecedda395d4d099b477d135a9a573eedaa5a7aad",
+          "n_values": 4685825,
+          "train_examples": 1352,
+          "train_loss_final": 0.18459711149334906,
+          "train_ms": 167013,
+          "train_steps": 43,
+          "mps_peak_gb": 0.0,
+          "mode": "encrypted",
+          "n_ciphertexts": 287,
+          "ct_sha256": "9a37fd303e54f360055ab01a7ebf43e5581ef3df4245d680623e6978edb5570b",
+          "bytes": 150568818,
+          "expansion_vs_fp16": 16.066414985621527,
+          "encrypt_ms": 524.025,
+          "created_at": "2026-10-29T20:27:33Z"
+        },
+        "op_c": {
+          "run_id": "modal_glimmer_E3",
+          "round": 1,
+          "operator": "op_c",
+          "layout_hash": "b70279f42d0d61b57e5da9a0394266988bd7ad8de5bd9ff9148b41d97203bc7d",
+          "lora_A_hash": "52ab8e6ef455d7565184ecab17f377ad7e2e8eb1ce447f0af40c27d1e95713a3",
+          "base_revision": "ecedda395d4d099b477d135a9a573eedaa5a7aad",
+          "n_values": 4685825,
+          "train_examples": 1182,
+          "train_loss_final": 0.12480666637420654,
+          "train_ms": 136686,
+          "train_steps": 37,
+          "mps_peak_gb": 0.0,
+          "mode": "encrypted",
+          "n_ciphertexts": 287,
+          "ct_sha256": "47fdf7704cb14f9f85743823d20d9668dc1c336d465ba13865c4b223784fbf6c",
+          "bytes": 150568818,
+          "expansion_vs_fp16": 16.066414985621527,
+          "encrypt_ms": 549.207,
+          "created_at": "2026-10-29T20:27:26Z"
+        }
+      },
+      "eval": {
+        "round": 2,
+        "pred_sha256": "6332483a9ef7068d75b504e9e2852617a699f8db0aa1baf6f5fa04bfa58e8789",
+        "macro_f1": 0.029239766081871343
+      }
+    },
+    {
+      "round": 2,
+      "active": [
+        "op_a",
+        "op_b"
+      ],
+      "contributors": [
+        "op_a",
+        "op_b",
+        "op_c"
+      ],
+      "rejected": {},
+      "aggregate_ms": 8.981,
+      "agg_bytes": 150568818,
+      "dec_share_ms": {
+        "op_a": 856,
+        "op_b": 796
+      },
+      "combine_ms": 319.41,
+      "solo_rel_err": 3210159.570544835,
+      "weight_sum": 0.34009989727937806,
+      "close_ms": 3854,
+      "skipped_training": [],
+      "manifests": {
+        "op_a": {
+          "run_id": "modal_glimmer_E3",
+          "round": 2,
+          "operator": "op_a",
+          "layout_hash": "b70279f42d0d61b57e5da9a0394266988bd7ad8de5bd9ff9148b41d97203bc7d",
+          "lora_A_hash": "52ab8e6ef455d7565184ecab17f377ad7e2e8eb1ce447f0af40c27d1e95713a3",
+          "base_revision": "ecedda395d4d099b477d135a9a573eedaa5a7aad",
+          "n_values": 4685825,
+          "train_examples": 867,
+          "train_loss_final": 0.10469119027256965,
+          "train_ms": 96085,
+          "train_steps": 28,
+          "mps_peak_gb": 0.0,
+          "mode": "encrypted",
+          "n_ciphertexts": 287,
+          "ct_sha256": "d19eb6de5119d5718735db38c75c1ca905552633421e274f141961498c6b64a5",
+          "bytes": 150568818,
+          "expansion_vs_fp16": 16.066414985621527,
+          "encrypt_ms": 527.809,
+          "created_at": "2026-10-29T20:34:18Z"
+        },
+        "op_b": {
+          "run_id": "modal_glimmer_E3",
+          "round": 2,
+          "operator": "op_b",
+          "layout_hash": "b70279f42d0d61b57e5da9a0394266988bd7ad8de5bd9ff9148b41d97203bc7d",
+          "lora_A_hash": "52ab8e6ef455d7565184ecab17f377ad7e2e8eb1ce447f0af40c27d1e95713a3",
+          "base_revision": "ecedda395d4d099b477d135a9a573eedaa5a7aad",
+          "n_values": 4685825,
+          "train_examples": 1352,
+          "train_loss_final": 0.09971950948238373,
+          "train_ms": 165837,
+          "train_steps": 43,
+          "mps_peak_gb": 0.0,
+          "mode": "encrypted",
+          "n_ciphertexts": 287,
+          "ct_sha256": "403990166cb1172de4494ed09f3c68dfedd7599707c79d466e352274ef6f0df1",
+          "bytes": 150568818,
+          "expansion_vs_fp16": 16.066414985621527,
+          "encrypt_ms": 557.316,
+          "created_at": "2026-10-29T20:35:29Z"
+        },
+        "op_c": {
+          "run_id": "modal_glimmer_E3",
+          "round": 2,
+          "operator": "op_c",
+          "layout_hash": "b70279f42d0d61b57e5da9a0394266988bd7ad8de5bd9ff9148b41d97203bc7d",
+          "lora_A_hash": "52ab8e6ef455d7565184ecab17f377ad7e2e8eb1ce447f0af40c27d1e95713a3",
+          "base_revision": "ecedda395d4d099b477d135a9a573eedaa5a7aad",
+          "n_values": 4685825,
+          "train_examples": 1182,
+          "train_loss_final": 0.021658158593345432,
+          "train_ms": 139345,
+          "train_steps": 37,
+          "mps_peak_gb": 0.0,
+          "mode": "encrypted",
+          "n_ciphertexts": 287,
+          "ct_sha256": "a198a074369d3474ebc0c5b87112d8b614307c4be994bb47e19940e99a581403",
+          "bytes": 150568818,
+          "expansion_vs_fp16": 16.066414985621527,
+          "encrypt_ms": 530.681,
+          "created_at": "2026-10-29T20:35:16Z"
+        }
+      },
+      "eval": {
+        "round": 3,
+        "pred_sha256": "45d5a77aa0911f74ba9db59adeed3e0ef43380355f7f6c21926dcf8ba734e992",
+        "macro_f1": 0.4989723300718393
+      }
+    },
+    {
+      "round": 3,
+      "active": [
+        "op_a",
+        "op_b"
+      ],
+      "contributors": [
+        "op_a",
+        "op_b",
+        "op_c"
+      ],
+      "rejected": {},
+      "aggregate_ms": 8.194,
+      "agg_bytes": 150568818,
+      "dec_share_ms": {
+        "op_a": 854,
+        "op_b": 804
+      },
+      "combine_ms": 324.826,
+      "solo_rel_err": 2642291.173828333,
+      "weight_sum": 0.34010002046057264,
+      "close_ms": 3982,
+      "skipped_training": [],
+      "manifests": {
+        "op_a": {
+          "run_id": "modal_glimmer_E3",
+          "round": 3,
+          "operator": "op_a",
+          "layout_hash": "b70279f42d0d61b57e5da9a0394266988bd7ad8de5bd9ff9148b41d97203bc7d",
+          "lora_A_hash": "52ab8e6ef455d7565184ecab17f377ad7e2e8eb1ce447f0af40c27d1e95713a3",
+          "base_revision": "ecedda395d4d099b477d135a9a573eedaa5a7aad",
+          "n_values": 4685825,
+          "train_examples": 867,
+          "train_loss_final": 0.03142540759872645,
+          "train_ms": 106926,
+          "train_steps": 28,
+          "mps_peak_gb": 0.0,
+          "mode": "encrypted",
+          "n_ciphertexts": 287,
+          "ct_sha256": "2e88fbba69134043d5fd461884cf747a650ef1fe0411213aa28f1b22f93195a4",
+          "bytes": 150568818,
+          "expansion_vs_fp16": 16.066414985621527,
+          "encrypt_ms": 449.236,
+          "created_at": "2026-10-29T20:41:52Z"
+        },
+        "op_b": {
+          "run_id": "modal_glimmer_E3",
+          "round": 3,
+          "operator": "op_b",
+          "layout_hash": "b70279f42d0d61b57e5da9a0394266988bd7ad8de5bd9ff9148b41d97203bc7d",
+          "lora_A_hash": "52ab8e6ef455d7565184ecab17f377ad7e2e8eb1ce447f0af40c27d1e95713a3",
+          "base_revision": "ecedda395d4d099b477d135a9a573eedaa5a7aad",
+          "n_values": 4685825,
+          "train_examples": 1352,
+          "train_loss_final": 0.01517728385515511,
+          "train_ms": 167257,
+          "train_steps": 43,
+          "mps_peak_gb": 0.0,
+          "mode": "encrypted",
+          "n_ciphertexts": 287,
+          "ct_sha256": "0cd356390e3cb05754e2e56b56fc692899f8ffb3dfe4fbe309b10e868f0e7819",
+          "bytes": 150568818,
+          "expansion_vs_fp16": 16.066414985621527,
+          "encrypt_ms": 570.036,
+          "created_at": "2026-10-29T20:43:10Z"
+        },
+        "op_c": {
+          "run_id": "modal_glimmer_E3",
+          "round": 3,
+          "operator": "op_c",
+          "layout_hash": "b70279f42d0d61b57e5da9a0394266988bd7ad8de5bd9ff9148b41d97203bc7d",
+          "lora_A_hash": "52ab8e6ef455d7565184ecab17f377ad7e2e8eb1ce447f0af40c27d1e95713a3",
+          "base_revision": "ecedda395d4d099b477d135a9a573eedaa5a7aad",
+          "n_values": 4685825,
+          "train_examples": 1182,
+          "train_loss_final": 0.06375404431018979,
+          "train_ms": 138876,
+          "train_steps": 37,
+          "mps_peak_gb": 0.0,
+          "mode": "encrypted",
+          "n_ciphertexts": 287,
+          "ct_sha256": "0bd1f06bf7a8aef7edc517616a3499da94670df2b5e77117be03699834b2a32f",
+          "bytes": 150568818,
+          "expansion_vs_fp16": 16.066414985621527,
+          "encrypt_ms": 534.512,
+          "created_at": "2026-10-29T20:43:09Z"
+        }
+      },
+      "eval": {
+        "round": 4,
+        "pred_sha256": "77d9069ef636c69eb10c5f9da4500bcc2e80ad708489ae32ddc9295bb827c642",
+        "macro_f1": 0.641733027122165
+      }
+    },
+    {
+      "round": 4,
+      "active": [
+        "op_a",
+        "op_b"
+      ],
+      "contributors": [
+        "op_a",
+        "op_b",
+        "op_c"
+      ],
+      "rejected": {},
+      "aggregate_ms": 7.69,
+      "agg_bytes": 150568818,
+      "dec_share_ms": {
+        "op_a": 836,
+        "op_b": 898
+      },
+      "combine_ms": 310.974,
+      "solo_rel_err": 2281996.2720477744,
+      "weight_sum": 0.340099944461151,
+      "close_ms": 3870,
+      "skipped_training": [],
+      "manifests": {
+        "op_a": {
+          "run_id": "modal_glimmer_E3",
+          "round": 4,
+          "operator": "op_a",
+          "layout_hash": "b70279f42d0d61b57e5da9a0394266988bd7ad8de5bd9ff9148b41d97203bc7d",
+          "lora_A_hash": "52ab8e6ef455d7565184ecab17f377ad7e2e8eb1ce447f0af40c27d1e95713a3",
+          "base_revision": "ecedda395d4d099b477d135a9a573eedaa5a7aad",
+          "n_values": 4685825,
+          "train_examples": 867,
+          "train_loss_final": 0.024684264278039336,
+          "train_ms": 102726,
+          "train_steps": 28,
+          "mps_peak_gb": 0.0,
+          "mode": "encrypted",
+          "n_ciphertexts": 287,
+          "ct_sha256": "a69c10f326970a1196ca2325aa62b0dc3053a6d4d9a58a72eb5c233ba9654371",
+          "bytes": 150568818,
+          "expansion_vs_fp16": 16.066414985621527,
+          "encrypt_ms": 586.683,
+          "created_at": "2026-10-29T20:50:33Z"
+        },
+        "op_b": {
+          "run_id": "modal_glimmer_E3",
+          "round": 4,
+          "operator": "op_b",
+          "layout_hash": "b70279f42d0d61b57e5da9a0394266988bd7ad8de5bd9ff9148b41d97203bc7d",
+          "lora_A_hash": "52ab8e6ef455d7565184ecab17f377ad7e2e8eb1ce447f0af40c27d1e95713a3",
+          "base_revision": "ecedda395d4d099b477d135a9a573eedaa5a7aad",
+          "n_values": 4685825,
+          "train_examples": 1352,
+          "train_loss_final": 0.03923596960958094,
+          "train_ms": 165392,
+          "train_steps": 43,
+          "mps_peak_gb": 0.0,
+          "mode": "encrypted",
+          "n_ciphertexts": 287,
+          "ct_sha256": "39f0b9d507a9bde3d0ffbcb38e1e02dcc9c6ffaa6f368e89df6386cdfdd5e226",
+          "bytes": 150568818,
+          "expansion_vs_fp16": 16.066414985621527,
+          "encrypt_ms": 683.901,
+          "created_at": "2026-10-29T20:50:38Z"
+        },
+        "op_c": {
+          "run_id": "modal_glimmer_E3",
+          "round": 4,
+          "operator": "op_c",
+          "layout_hash": "b70279f42d0d61b57e5da9a0394266988bd7ad8de5bd9ff9148b41d97203bc7d",
+          "lora_A_hash": "52ab8e6ef455d7565184ecab17f377ad7e2e8eb1ce447f0af40c27d1e95713a3",
+          "base_revision": "ecedda395d4d099b477d135a9a573eedaa5a7aad",
+          "n_values": 4685825,
+          "train_examples": 1182,
+          "train_loss_final": 0.016667745891027153,
+          "train_ms": 138506,
+          "train_steps": 37,
+          "mps_peak_gb": 0.0,
+          "mode": "encrypted",
+          "n_ciphertexts": 287,
+          "ct_sha256": "9237b376fdcffac55c51de16d2c4d55736530f387a5c9d4ca7ed8917a4c11c15",
+          "bytes": 150568818,
+          "expansion_vs_fp16": 16.066414985621527,
+          "encrypt_ms": 547.761,
+          "created_at": "2026-10-29T20:50:36Z"
+        }
+      },
+      "eval": {
+        "round": 5,
+        "pred_sha256": "d3478ca70d213d52c9477e75aa1d0646a528b76e704266821364e2335e9c3c47",
+        "macro_f1": 0.7480103196747926
+      }
+    },
+    {
+      "round": 5,
+      "active": [
+        "op_a",
+        "op_b"
+      ],
+      "contributors": [
+        "op_a",
+        "op_b",
+        "op_c"
+      ],
+      "rejected": {},
+      "aggregate_ms": 8.053,
+      "agg_bytes": 150568818,
+      "dec_share_ms": {
+        "op_a": 998,
+        "op_b": 820
+      },
+      "combine_ms": 330.655,
+      "solo_rel_err": 2056775.862395437,
+      "weight_sum": 0.34009992256119015,
+      "close_ms": 4051,
+      "skipped_training": [],
+      "manifests": {
+        "op_a": {
+          "run_id": "modal_glimmer_E3",
+          "round": 5,
+          "operator": "op_a",
+          "layout_hash": "b70279f42d0d61b57e5da9a0394266988bd7ad8de5bd9ff9148b41d97203bc7d",
+          "lora_A_hash": "52ab8e6ef455d7565184ecab17f377ad7e2e8eb1ce447f0af40c27d1e95713a3",
+          "base_revision": "ecedda395d4d099b477d135a9a573eedaa5a7aad",
+          "n_values": 4685825,
+          "train_examples": 867,
+          "train_loss_final": 0.010019975551404058,
+          "train_ms": 104837,
+          "train_steps": 28,
+          "mps_peak_gb": 0.0,
+          "mode": "encrypted",
+          "n_ciphertexts": 287,
+          "ct_sha256": "3199ede1758ef50da210fb4748643e2863b807a7cd7d1f0af1e57e9ed69a131d",
+          "bytes": 150568818,
+          "expansion_vs_fp16": 16.066414985621527,
+          "encrypt_ms": 478.992,
+          "created_at": "2026-10-29T20:57:24Z"
+        },
+        "op_b": {
+          "run_id": "modal_glimmer_E3",
+          "round": 5,
+          "operator": "op_b",
+          "layout_hash": "b70279f42d0d61b57e5da9a0394266988bd7ad8de5bd9ff9148b41d97203bc7d",
+          "lora_A_hash": "52ab8e6ef455d7565184ecab17f377ad7e2e8eb1ce447f0af40c27d1e95713a3",
+          "base_revision": "ecedda395d4d099b477d135a9a573eedaa5a7aad",
+          "n_values": 4685825,
+          "train_examples": 1352,
+          "train_loss_final": 0.01634703224990517,
+          "train_ms": 165870,
+          "train_steps": 43,
+          "mps_peak_gb": 0.0,
+          "mode": "encrypted",
+          "n_ciphertexts": 287,
+          "ct_sha256": "9b75b281039bea7c416ea2f23a1e1a51b905cfcb30d72aaccab5360cc08a1c64",
+          "bytes": 150568818,
+          "expansion_vs_fp16": 16.066414985621527,
+          "encrypt_ms": 556.603,
+          "created_at": "2026-10-29T20:59:06Z"
+        },
+        "op_c": {
+          "run_id": "modal_glimmer_E3",
+          "round": 5,
+          "operator": "op_c",
+          "layout_hash": "b70279f42d0d61b57e5da9a0394266988bd7ad8de5bd9ff9148b41d97203bc7d",
+          "lora_A_hash": "52ab8e6ef455d7565184ecab17f377ad7e2e8eb1ce447f0af40c27d1e95713a3",
+          "base_revision": "ecedda395d4d099b477d135a9a573eedaa5a7aad",
+          "n_values": 4685825,
+          "train_examples": 1182,
+          "train_loss_final": 0.020654892930178904,
+          "train_ms": 136470,
+          "train_steps": 37,
+          "mps_peak_gb": 0.0,
+          "mode": "encrypted",
+          "n_ciphertexts": 287,
+          "ct_sha256": "00a5b2ccfa580b6b74203bf39d2bddd5602b3a9565c73b93de9927f1147a3c4f",
+          "bytes": 150568818,
+          "expansion_vs_fp16": 16.066414985621527,
+          "encrypt_ms": 555.758,
+          "created_at": "2026-10-29T20:59:06Z"
+        }
+      },
+      "eval": {
+        "round": 6,
+        "pred_sha256": "56d4fb4b61f71f6c46a77e096e70ab05373b30f2f110a8643bcefc305926edfe",
+        "macro_f1": 0.913615439415339
+      }
+    },
+    {
+      "round": 6,
+      "active": [
+        "op_a",
+        "op_b"
+      ],
+      "contributors": [
+        "op_a",
+        "op_b",
+        "op_c"
+      ],
+      "rejected": {},
+      "aggregate_ms": 8.133,
+      "agg_bytes": 150568818,
+      "dec_share_ms": {
+        "op_a": 885,
+        "op_b": 847
+      },
+      "combine_ms": 363.273,
+      "solo_rel_err": 1867367.6330351369,
+      "weight_sum": 0.3400999589909882,
+      "close_ms": 3960,
+      "skipped_training": [],
+      "manifests": {
+        "op_a": {
+          "run_id": "modal_glimmer_E3",
+          "round": 6,
+          "operator": "op_a",
+          "layout_hash": "b70279f42d0d61b57e5da9a0394266988bd7ad8de5bd9ff9148b41d97203bc7d",
+          "lora_A_hash": "52ab8e6ef455d7565184ecab17f377ad7e2e8eb1ce447f0af40c27d1e95713a3",
+          "base_revision": "ecedda395d4d099b477d135a9a573eedaa5a7aad",
+          "n_values": 4685825,
+          "train_examples": 867,
+          "train_loss_final": 0.05889430261731832,
+          "train_ms": 106069,
+          "train_steps": 28,
+          "mps_peak_gb": 0.0,
+          "mode": "encrypted",
+          "n_ciphertexts": 287,
+          "ct_sha256": "0c2c236e6b83f8918488791968b0d86a756eb05a789977538903a0401aeff213",
+          "bytes": 150568818,
+          "expansion_vs_fp16": 16.066414985621527,
+          "encrypt_ms": 489.831,
+          "created_at": "2026-10-29T21:08:12Z"
+        },
+        "op_b": {
+          "run_id": "modal_glimmer_E3",
+          "round": 6,
+          "operator": "op_b",
+          "layout_hash": "b70279f42d0d61b57e5da9a0394266988bd7ad8de5bd9ff9148b41d97203bc7d",
+          "lora_A_hash": "52ab8e6ef455d7565184ecab17f377ad7e2e8eb1ce447f0af40c27d1e95713a3",
+          "base_revision": "ecedda395d4d099b477d135a9a573eedaa5a7aad",
+          "n_values": 4685825,
+          "train_examples": 1352,
+          "train_loss_final": 0.013844615264679306,
+          "train_ms": 169647,
+          "train_steps": 43,
+          "mps_peak_gb": 0.0,
+          "mode": "encrypted",
+          "n_ciphertexts": 287,
+          "ct_sha256": "8c48a1a84d17b7905bd96473647e3a9de74d37529860be60ce0b78dc83f1411e",
+          "bytes": 150568818,
+          "expansion_vs_fp16": 16.066414985621527,
+          "encrypt_ms": 543.485,
+          "created_at": "2026-10-29T21:09:09Z"
+        },
+        "op_c": {
+          "run_id": "modal_glimmer_E3",
+          "round": 6,
+          "operator": "op_c",
+          "layout_hash": "b70279f42d0d61b57e5da9a0394266988bd7ad8de5bd9ff9148b41d97203bc7d",
+          "lora_A_hash": "52ab8e6ef455d7565184ecab17f377ad7e2e8eb1ce447f0af40c27d1e95713a3",
+          "base_revision": "ecedda395d4d099b477d135a9a573eedaa5a7aad",
+          "n_values": 4685825,
+          "train_examples": 1182,
+          "train_loss_final": 0.02081505140522495,
+          "train_ms": 138783,
+          "train_steps": 37,
+          "mps_peak_gb": 0.0,
+          "mode": "encrypted",
+          "n_ciphertexts": 287,
+          "ct_sha256": "2fc4e1e3557b1ba10982bf74088b13ae73d77f7e324464797325a8d5eedf1620",
+          "bytes": 150568818,
+          "expansion_vs_fp16": 16.066414985621527,
+          "encrypt_ms": 438.777,
+          "created_at": "2026-10-29T21:06:36Z"
+        }
+      },
+      "eval": {
+        "round": 7,
+        "pred_sha256": "b4a06a371db1d6b9911aaabad84be3dc0a67ec9ee50d94b2f9882421fc8622b6",
+        "macro_f1": 0.9491711190403233
+      }
+    }
+  ],
+  "final": {
+    "round": 7,
+    "n_test": 998,
+    "scoring": "full",
+    "pred_sha256": "b4a06a371db1d6b9911aaabad84be3dc0a67ec9ee50d94b2f9882421fc8622b6",
+    "metrics": {
+      "accuracy": 0.9559118236472945,
+      "macro_f1": 0.9491711190403233,
+      "per_class": {
+        "benign": {
+          "recall": 0.9933333333333333,
+          "precision": 1.0,
+          "f1": 0.9966555183946488,
+          "support": 150
+        },
+        "udp_flood": {
+          "recall": 1.0,
+          "precision": 0.9696969696969697,
+          "f1": 0.9846153846153847,
+          "support": 32
+        },
+        "icmp_flood": {
+          "recall": 1.0,
+          "precision": 0.8306451612903226,
+          "f1": 0.907488986784141,
+          "support": 103
+        },
+        "syn_flood": {
+          "recall": 0.9933333333333333,
+          "precision": 1.0,
+          "f1": 0.9966555183946488,
+          "support": 150
+        },
+        "http_flood": {
+          "recall": 0.96,
+          "precision": 0.9863013698630136,
+          "f1": 0.9729729729729729,
+          "support": 150
+        },
+        "slowrate_dos": {
+          "recall": 0.9866666666666667,
+          "precision": 0.961038961038961,
+          "f1": 0.9736842105263157,
+          "support": 150
+        },
+        "syn_scan": {
+          "recall": 0.92,
+          "precision": 0.8761904761904762,
+          "f1": 0.8975609756097561,
+          "support": 100
+        },
+        "tcp_connect_scan": {
+          "recall": 0.8269230769230769,
+          "precision": 0.9772727272727273,
+          "f1": 0.8958333333333334,
+          "support": 52
+        },
+        "udp_scan": {
+          "recall": 0.8468468468468469,
+          "precision": 1.0,
+          "f1": 0.9170731707317074,
+          "support": 111
+        }
+      },
+      "eval_ms": 681944,
+      "mps_peak_gb": 0.0
+    },
+    "fast_path": {
+      "agreement_with_primary": 1.0,
+      "pred_sha256": "b4a06a371db1d6b9911aaabad84be3dc0a67ec9ee50d94b2f9882421fc8622b6",
+      "metrics": {
+        "accuracy": 0.9559118236472945,
+        "macro_f1": 0.9491711190403233,
+        "per_class": {
+          "benign": {
+            "recall": 0.9933333333333333,
+            "precision": 1.0,
+            "f1": 0.9966555183946488,
+            "support": 150
+          },
+          "udp_flood": {
+            "recall": 1.0,
+            "precision": 0.9696969696969697,
+            "f1": 0.9846153846153847,
+            "support": 32
+          },
+          "icmp_flood": {
+            "recall": 1.0,
+            "precision": 0.8306451612903226,
+            "f1": 0.907488986784141,
+            "support": 103
+          },
+          "syn_flood": {
+            "recall": 0.9933333333333333,
+            "precision": 1.0,
+            "f1": 0.9966555183946488,
+            "support": 150
+          },
+          "http_flood": {
+            "recall": 0.96,
+            "precision": 0.9863013698630136,
+            "f1": 0.9729729729729729,
+            "support": 150
+          },
+          "slowrate_dos": {
+            "recall": 0.9866666666666667,
+            "precision": 0.961038961038961,
+            "f1": 0.9736842105263157,
+            "support": 150
+          },
+          "syn_scan": {
+            "recall": 0.92,
+            "precision": 0.8761904761904762,
+            "f1": 0.8975609756097561,
+            "support": 100
+          },
+          "tcp_connect_scan": {
+            "recall": 0.8269230769230769,
+            "precision": 0.9772727272727273,
+            "f1": 0.8958333333333334,
+            "support": 52
+          },
+          "udp_scan": {
+            "recall": 0.8468468468468469,
+            "precision": 1.0,
+            "f1": 0.9170731707317074,
+            "support": 111
+          }
+        },
+        "eval_ms": 79508
+      }
+    }
+  },
+  "metrics": {
+    "accuracy": 0.9559118236472945,
+    "macro_f1": 0.9491711190403233,
+    "per_class": {
+      "benign": {
+        "recall": 0.9933333333333333,
+        "precision": 1.0,
+        "f1": 0.9966555183946488,
+        "support": 150
+      },
+      "udp_flood": {
+        "recall": 1.0,
+        "precision": 0.9696969696969697,
+        "f1": 0.9846153846153847,
+        "support": 32
+      },
+      "icmp_flood": {
+        "recall": 1.0,
+        "precision": 0.8306451612903226,
+        "f1": 0.907488986784141,
+        "support": 103
+      },
+      "syn_flood": {
+        "recall": 0.9933333333333333,
+        "precision": 1.0,
+        "f1": 0.9966555183946488,
+        "support": 150
+      },
+      "http_flood": {
+        "recall": 0.96,
+        "precision": 0.9863013698630136,
+        "f1": 0.9729729729729729,
+        "support": 150
+      },
+      "slowrate_dos": {
+        "recall": 0.9866666666666667,
+        "precision": 0.961038961038961,
+        "f1": 0.9736842105263157,
+        "support": 150
+      },
+      "syn_scan": {
+        "recall": 0.92,
+        "precision": 0.8761904761904762,
+        "f1": 0.8975609756097561,
+        "support": 100
+      },
+      "tcp_connect_scan": {
+        "recall": 0.8269230769230769,
+        "precision": 0.9772727272727273,
+        "f1": 0.8958333333333334,
+        "support": 52
+      },
+      "udp_scan": {
+        "recall": 0.8468468468468469,
+        "precision": 1.0,
+        "f1": 0.9170731707317074,
+        "support": 111
+      }
+    },
+    "eval_ms": 681944,
+    "mps_peak_gb": 0.0
+  },
+  "pred_sha256": "b4a06a371db1d6b9911aaabad84be3dc0a67ec9ee50d94b2f9882421fc8622b6",
+  "crypto": {
+    "bytes_per_submission": 150568818,
+    "expansion_vs_fp16": 16.066414985621527,
+    "n_values": 4685825,
+    "n_ciphertexts": 287,
+    "per_round": [
+      {
+        "round": 1,
+        "skipped": false,
+        "encrypt_ms": {
+          "op_a": 445.854,
+          "op_b": 524.025,
+          "op_c": 549.207
+        },
+        "train_ms": {
+          "op_a": 104748,
+          "op_b": 167013,
+          "op_c": 136686
+        },
+        "aggregate_ms": 9.558,
+        "dec_share_ms": {
+          "op_a": 836,
+          "op_b": 798
+        },
+        "combine_ms": 339.738,
+        "solo_rel_err": 4371119.711436853,
+        "active": [
+          "op_a",
+          "op_b"
+        ],
+        "crypto_ms": 3502.382,
+        "crypto_over_train": 0.008574875075591203
+      },
+      {
+        "round": 2,
+        "skipped": false,
+        "encrypt_ms": {
+          "op_a": 527.809,
+          "op_b": 557.316,
+          "op_c": 530.681
+        },
+        "train_ms": {
+          "op_a": 96085,
+          "op_b": 165837,
+          "op_c": 139345
+        },
+        "aggregate_ms": 8.981,
+        "dec_share_ms": {
+          "op_a": 856,
+          "op_b": 796
+        },
+        "combine_ms": 319.41,
+        "solo_rel_err": 3210159.570544835,
+        "active": [
+          "op_a",
+          "op_b"
+        ],
+        "crypto_ms": 3596.197,
+        "crypto_over_train": 0.008962105032310158
+      },
+      {
+        "round": 3,
+        "skipped": false,
+        "encrypt_ms": {
+          "op_a": 449.236,
+          "op_b": 570.036,
+          "op_c": 534.512
+        },
+        "train_ms": {
+          "op_a": 106926,
+          "op_b": 167257,
+          "op_c": 138876
+        },
+        "aggregate_ms": 8.194,
+        "dec_share_ms": {
+          "op_a": 854,
+          "op_b": 804
+        },
+        "combine_ms": 324.826,
+        "solo_rel_err": 2642291.173828333,
+        "active": [
+          "op_a",
+          "op_b"
+        ],
+        "crypto_ms": 3544.804,
+        "crypto_over_train": 0.008581834556322462
+      },
+      {
+        "round": 4,
+        "skipped": false,
+        "encrypt_ms": {
+          "op_a": 586.683,
+          "op_b": 683.901,
+          "op_c": 547.761
+        },
+        "train_ms": {
+          "op_a": 102726,
+          "op_b": 165392,
+          "op_c": 138506
+        },
+        "aggregate_ms": 7.69,
+        "dec_share_ms": {
+          "op_a": 836,
+          "op_b": 898
+        },
+        "combine_ms": 310.974,
+        "solo_rel_err": 2281996.2720477744,
+        "active": [
+          "op_a",
+          "op_b"
+        ],
+        "crypto_ms": 3871.009,
+        "crypto_over_train": 0.00951987339655308
+      },
+      {
+        "round": 5,
+        "skipped": false,
+        "encrypt_ms": {
+          "op_a": 478.992,
+          "op_b": 556.603,
+          "op_c": 555.758
+        },
+        "train_ms": {
+          "op_a": 104837,
+          "op_b": 165870,
+          "op_c": 136470
+        },
+        "aggregate_ms": 8.053,
+        "dec_share_ms": {
+          "op_a": 998,
+          "op_b": 820
+        },
+        "combine_ms": 330.655,
+        "solo_rel_err": 2056775.862395437,
+        "active": [
+          "op_a",
+          "op_b"
+        ],
+        "crypto_ms": 3748.0609999999997,
+        "crypto_over_train": 0.009204991932255505
+      },
+      {
+        "round": 6,
+        "skipped": false,
+        "encrypt_ms": {
+          "op_a": 489.831,
+          "op_b": 543.485,
+          "op_c": 438.777
+        },
+        "train_ms": {
+          "op_a": 106069,
+          "op_b": 169647,
+          "op_c": 138783
+        },
+        "aggregate_ms": 8.133,
+        "dec_share_ms": {
+          "op_a": 885,
+          "op_b": 847
+        },
+        "combine_ms": 363.273,
+        "solo_rel_err": 1867367.6330351369,
+        "active": [
+          "op_a",
+          "op_b"
+        ],
+        "crypto_ms": 3575.4990000000003,
+        "crypto_over_train": 0.00862607388678863
+      }
+    ]
+  },
+  "total_s": 3708.1,
+  "smoke": false,
+  "modal_est_usd": 2.949,
+  "modal_gpu": "L40S",
+  "modal_device": "NVIDIA L40S",
+  "device_mismatches": []
+}

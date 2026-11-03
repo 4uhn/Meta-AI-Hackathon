@@ -1,0 +1,7 @@
+Threshold CKKS scaling at 4685825 values per submission (crypto-only medians, 10 cores)
+
+t-of-N minC  offline flood  max err     tolerance   (t-1) rel   checks  enc ms   agg ms    share ms comb ms   MB/sub    
+2-of-3 3     1       2^85   8.01e-07    1.00e-06    5.35e+05    15/15   359      9.2       123      412       150.57    
+3-of-4 4     1       2^86   1.80e-06    2.45e-06    4.76e+05    21/21   337      11.8      123      343       150.57    
+3-of-5 4     2       2^87   3.99e-06    4.90e-06    4.13e+05    39/39   391      10.2      126      365       150.57    
+4-of-5 5     1       2^87   4.32e-06    5.66e-06    4.14e+05    24/24   363      9.5       124      343       150.57    

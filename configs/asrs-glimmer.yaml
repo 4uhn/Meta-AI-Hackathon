@@ -1,0 +1,48 @@
+# Aviation safety reports (NASA ASRS), Muse Glimmer-30B on Modal. Identical to
+# configs/5g-nidd-glimmer.yaml except task, data_dir, results_dir and timeout: the train/fl recipe is
+# reused unchanged, not tuned on this domain. Data: configs/partitions/asrs.yaml.
+task: asrs
+model:
+  id: unsloth/Muse-Glimmer-30B-unsloth-bnb-4bit
+  revision: ecedda395d4d099b477d135a9a573eedaa5a7aad   # pre-quantised nf4 + double quant, bf16 compute
+  tokenizer_id: meta-models/Muse-Glimmer-30B           # canonical chat template; same tokenizer.json
+  tokenizer_revision: cec94fcfd6512f2cfe708138c32533b346ea4f69
+  loader: image_text_to_text  # MuseGlimmerForConditionalGeneration (AutoModelForCausalLM rejects it)
+  quantized: true             # device_map placement (4-bit weights can't be .to()-moved)
+  gradient_checkpointing: true
+  dtype: bfloat16
+  device: cuda
+lora:
+  r: 8
+  alpha: 16
+  # Language-model attention only: 52 layers × 4 = 208 modules, 4,685,824 B values. PEFT full-matches
+  # the regex, so the vision tower's attn.{q,k,v}_proj are never picked up.
+  target_modules: 'model\.language_model\.layers\.\d+\.self_attn\.(q|k|v|o)_proj'
+train:
+  lr: 5.0e-4
+  batch_size: 16          # effective batch = micro_batch × grad_accum
+  micro_batch: 16         # memory/speed only: the effective batch, and so the recipe, is unchanged
+  local_epochs: 0.5
+  rounds: 6
+  seed: 1234
+  adapter_seed: 4321
+  restrict_missing_labels: true
+  logit_adjust_tau: 1.0
+fl:
+  server_lr: 1.0
+data_dir: data/asrs      # replaced inside each container by its own mounted shard / test set
+results_dir: results/asrs-glimmer
+eval:
+  batch_flows: 8          # × 9 label continuations = 72 sequences per forward (full scoring)
+  every_round: true
+  split: test
+  scoring: full           # reported metric (final model, baselines): score every full label
+  round_scoring: first_token  # per-round curve: first label token only, much faster
+  compare_fast_final: true    # also score the final model with first_token; agreement is in E3.json
+modal:
+  image: glimmer          # adds bitsandbytes and accelerate; the Llama image is left unchanged
+  gpu: L40S               # 48 GB; A100-80GB is the fallback
+  cpu: 4
+  memory_mb: 32768        # host RAM, not GPU memory
+  timeout_s: 10800        # E4 trains on ~4,900 rows, with sequences ~1.7× longer than 5G-NIDD's
+  require_device: auto

@@ -1,0 +1,137 @@
+{
+  "source_files": [
+    "E0.json",
+    "E1a.json",
+    "E1b.json",
+    "E1c.json",
+    "E3.json",
+    "E4.json"
+  ],
+  "recall": {
+    "E0": {
+      "equipment_failure": 0.78,
+      "traffic_conflict": 0.82,
+      "ground_conflict": 0.05,
+      "turbulence": 0.1,
+      "terrain_warning": 0.36,
+      "airspace_violation": 0.32,
+      "loss_of_control": 0.59,
+      "hazmat": 0.2,
+      "passenger_misconduct": 0.3
+    },
+    "E1a": {
+      "equipment_failure": 0.88,
+      "traffic_conflict": 0.66,
+      "ground_conflict": 0.96,
+      "turbulence": 0.92,
+      "terrain_warning": 0.82,
+      "airspace_violation": 0.82,
+      "loss_of_control": 0.93,
+      "hazmat": 0.9,
+      "passenger_misconduct": 0.98
+    },
+    "E1b": {
+      "equipment_failure": 0.95,
+      "traffic_conflict": 0.79,
+      "ground_conflict": 0.93,
+      "turbulence": 0.87,
+      "terrain_warning": 0.88,
+      "airspace_violation": 0.76,
+      "loss_of_control": 0.08,
+      "hazmat": 0.89,
+      "passenger_misconduct": 0.92
+    },
+    "E1c": {
+      "equipment_failure": 0.88,
+      "traffic_conflict": 0.78,
+      "ground_conflict": 0.93,
+      "turbulence": 0.88,
+      "terrain_warning": 0.88,
+      "airspace_violation": 0.86,
+      "loss_of_control": 0.66,
+      "hazmat": 0.89,
+      "passenger_misconduct": 0.93
+    },
+    "E3": {
+      "equipment_failure": 0.93,
+      "traffic_conflict": 0.9,
+      "ground_conflict": 0.92,
+      "turbulence": 0.89,
+      "terrain_warning": 0.88,
+      "airspace_violation": 0.86,
+      "loss_of_control": 0.92,
+      "hazmat": 0.89,
+      "passenger_misconduct": 0.99
+    },
+    "E4": {
+      "equipment_failure": 0.92,
+      "traffic_conflict": 0.87,
+      "ground_conflict": 0.84,
+      "turbulence": 0.92,
+      "terrain_warning": 0.85,
+      "airspace_violation": 0.87,
+      "loss_of_control": 0.93,
+      "hazmat": 0.91,
+      "passenger_misconduct": 0.98
+    }
+  },
+  "macro_f1": {
+    "E0": 0.36361972812197774,
+    "E1a": 0.8729771764678971,
+    "E1b": 0.75948859061134,
+    "E1c": 0.855012880674951,
+    "E3": 0.9095977276491729,
+    "E4": 0.8991782401214832
+  },
+  "accuracy": {
+    "E0": 0.39111111111111113,
+    "E1a": 0.8744444444444445,
+    "E1b": 0.7855555555555556,
+    "E1c": 0.8544444444444445,
+    "E3": 0.9088888888888889,
+    "E4": 0.8988888888888888
+  },
+  "blind_spot_recall": {
+    "op_b": {
+      "classes": [
+        "loss_of_control",
+        "hazmat",
+        "passenger_misconduct"
+      ],
+      "local": 0.63,
+      "horizon_E3": 0.9333333333333332
+    },
+    "op_c": {
+      "classes": [
+        "hazmat",
+        "passenger_misconduct"
+      ],
+      "local": 0.91,
+      "horizon_E3": 0.94
+    },
+    "mean": {
+      "local": 0.77,
+      "horizon_E3": 0.9366666666666665
+    }
+  },
+  "blind_spot_classes": {
+    "op_a": [],
+    "op_b": [
+      "loss_of_control",
+      "hazmat",
+      "passenger_misconduct"
+    ],
+    "op_c": [
+      "hazmat",
+      "passenger_misconduct"
+    ]
+  },
+  "row_names": {
+    "E0": "Base model (E0)",
+    "E1a": "Local only: airline (E1a)",
+    "E1b": "Local only: air traffic control (E1b)",
+    "E1c": "Local only: general aviation (E1c)",
+    "E3": "Horizon: encrypted FL (E3)",
+    "E4": "Centralised, pooled (E4)"
+  }
+}

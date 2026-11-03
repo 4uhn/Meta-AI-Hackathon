@@ -1,0 +1,39 @@
+# Sweep S7: S4 + local logit adjustment, τ = 1 (shard's own label prior).
+# Federated validation only (operators' own val splits, no test set); results → runs/sweep.
+model:
+  id: meta-llama/Llama-3.2-1B-Instruct
+  revision: 9213176726f574b556790deb65791e0c5aa438b6
+  dtype: bfloat16
+  device: cuda
+lora:
+  r: 8
+  alpha: 16
+  target_modules:
+  - q_proj
+  - k_proj
+  - v_proj
+  - o_proj
+train:
+  lr: 0.0005
+  batch_size: 16
+  micro_batch: 8
+  local_epochs: 0.5
+  rounds: 6
+  seed: 1234
+  adapter_seed: 4321
+  restrict_missing_labels: true
+  logit_adjust_tau: 1.0
+fl:
+  server_lr: 1.0
+data_dir: data/processed
+results_dir: runs/sweep
+eval:
+  batch_flows: 8
+  every_round: true
+  split: val
+modal:
+  gpu: A10
+  cpu: 2
+  memory_mb: 12288
+  timeout_s: 1800
+  require_device: auto

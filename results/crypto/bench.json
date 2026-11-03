@@ -1,0 +1,124 @@
+{
+  "aggregate": {
+    "agg_sha256": "3e47735d17094275fc186a862d078e32593be42ac441d8c3284c521cc65788f9",
+    "bytes": 150568818,
+    "contributors": [
+      "op_a",
+      "op_b",
+      "op_c"
+    ],
+    "ms": 620.809,
+    "rejected": {},
+    "round": 1,
+    "sum_ms": 8.39
+  },
+  "bytes_per_submission": 150568818,
+  "ceremony_ms": 124.342,
+  "combine": {
+    "combine_ms": 326.15,
+    "ms": 595.064,
+    "n_values": 4685825,
+    "round": 1,
+    "used": [
+      "op_a",
+      "op_c"
+    ],
+    "weight_slot": 0.5099999886980872
+  },
+  "dec_shares": [
+    {
+      "active": [
+        "op_a",
+        "op_c"
+      ],
+      "bytes": 75244520,
+      "contributors": [
+        "op_a",
+        "op_b",
+        "op_c"
+      ],
+      "ms": 671.084,
+      "party": "op_a",
+      "round": 1,
+      "share_ms": 120.082,
+      "verify_ms": 461.528
+    },
+    {
+      "active": [
+        "op_a",
+        "op_c"
+      ],
+      "bytes": 75244520,
+      "contributors": [
+        "op_a",
+        "op_b",
+        "op_c"
+      ],
+      "ms": 706.712,
+      "party": "op_c",
+      "round": 1,
+      "share_ms": 118.424,
+      "verify_ms": 455.769
+    }
+  ],
+  "encrypt": [
+    {
+      "bytes": 150568818,
+      "ct_sha256": "b332ce745782b8a49ee69567385d074f4f1563224dfc5c536191abd1b2b74e00",
+      "encrypt_ms": 369.611,
+      "expansion_vs_fp16": 16.066414985621527,
+      "ms": 712.313,
+      "n_ciphertexts": 287,
+      "n_values": 4685825,
+      "party": "op_a",
+      "round": 1
+    },
+    {
+      "bytes": 150568818,
+      "ct_sha256": "9a1b576648b2a7d23b1eb92d51c1ffa72d303e6e0166accbee14d6b56d56622f",
+      "encrypt_ms": 359.818,
+      "expansion_vs_fp16": 16.066414985621527,
+      "ms": 589.967,
+      "n_ciphertexts": 287,
+      "n_values": 4685825,
+      "party": "op_b",
+      "round": 1
+    },
+    {
+      "bytes": 150568818,
+      "ct_sha256": "02b7a02456d3ff10e4507ac90e7682a0a5a43c8278eebdffa3a94706322986f7",
+      "encrypt_ms": 386.004,
+      "expansion_vs_fp16": 16.066414985621527,
+      "ms": 663.858,
+      "n_ciphertexts": 287,
+      "n_values": 4685825,
+      "party": "op_c",
+      "round": 1
+    }
+  ],
+  "expansion_vs_fp16": 16.066414985621527,
+  "machine": {
+    "go": "go1.27.3",
+    "goarch": "arm64",
+    "goos": "darwin",
+    "num_cpu": 10,
+    "workers": 10
+  },
+  "max_abs_err": 6.928397870988555e-7,
+  "n_ciphertexts": 287,
+  "n_values": 4685825,
+  "note": "one round, 3 submissions, decrypt with [op_a op_c]; timings include file I/O and verification",
+  "params": {
+    "flood_log_width": 85,
+    "ms": 5.368,
+    "params_sha256": "ed03de312c948e0daa3db64e22e195389950cbb9439e2a9ddf592436d27734b8",
+    "parties": [
+      "op_a",
+      "op_b",
+      "op_c"
+    ],
+    "run_id": "run",
+    "slots": 16384
+  },
+  "spec": "T6"
+}

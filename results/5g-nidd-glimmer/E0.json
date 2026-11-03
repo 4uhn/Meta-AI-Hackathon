@@ -1,0 +1,75 @@
+{
+  "exp": "E0",
+  "model": "unsloth/Muse-Glimmer-30B-unsloth-bnb-4bit",
+  "revision": "ecedda395d4d099b477d135a9a573eedaa5a7aad",
+  "epochs": 3.0,
+  "layout_hash": "b70279f42d0d61b57e5da9a0394266988bd7ad8de5bd9ff9148b41d97203bc7d",
+  "a_hash": "52ab8e6ef455d7565184ecab17f377ad7e2e8eb1ce447f0af40c27d1e95713a3",
+  "lr": 0.0005,
+  "dtype": "bfloat16",
+  "smoke": false,
+  "metrics": {
+    "accuracy": 0.11322645290581163,
+    "macro_f1": 0.022622622622622622,
+    "per_class": {
+      "benign": {
+        "recall": 0.7533333333333333,
+        "precision": 0.11770833333333333,
+        "f1": 0.2036036036036036,
+        "support": 150
+      },
+      "udp_flood": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "support": 32
+      },
+      "icmp_flood": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "support": 103
+      },
+      "syn_flood": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "support": 150
+      },
+      "http_flood": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "support": 150
+      },
+      "slowrate_dos": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "support": 150
+      },
+      "syn_scan": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "support": 100
+      },
+      "tcp_connect_scan": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "support": 52
+      },
+      "udp_scan": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "support": 111
+      }
+    },
+    "eval_ms": 662906,
+    "mps_peak_gb": 0.0
+  },
+  "n_test": 998,
+  "pred_sha256": "8c935615990cbcad5fb72632e9499df1794b8090e28485840446e5f08fce5ed2"
+}

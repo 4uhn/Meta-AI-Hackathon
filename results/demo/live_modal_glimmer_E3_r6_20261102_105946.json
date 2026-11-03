@@ -1,0 +1,164 @@
+{
+  "kind": "live_redecryption",
+  "created_at": "2026-11-02T11:00:07Z",
+  "source_run": "modal_glimmer_E3",
+  "round": 6,
+  "recorded_active": [
+    "op_a",
+    "op_b"
+  ],
+  "live_active": [
+    "op_a",
+    "op_c"
+  ],
+  "offline": [
+    "op_b"
+  ],
+  "key_shares_present": [
+    "op_a",
+    "op_c"
+  ],
+  "submissions": {
+    "op_a": {
+      "bytes": 150568818,
+      "ct_sha256": "0c2c236e6b83f8918488791968b0d86a756eb05a789977538903a0401aeff213",
+      "n_values": 4685825
+    },
+    "op_b": {
+      "bytes": 150568818,
+      "ct_sha256": "8c48a1a84d17b7905bd96473647e3a9de74d37529860be60ce0b78dc83f1411e",
+      "n_values": 4685825
+    },
+    "op_c": {
+      "bytes": 150568818,
+      "ct_sha256": "2fc4e1e3557b1ba10982bf74088b13ae73d77f7e324464797325a8d5eedf1620",
+      "n_values": 4685825
+    }
+  },
+  "aggregate": {
+    "agg_sha256": "86c74b38d93ef4ce8e429445e8ba1a6eb77e97db2ba8c9a498d50dbd7f58f9e8",
+    "recorded_agg_sha256": "86c74b38d93ef4ce8e429445e8ba1a6eb77e97db2ba8c9a498d50dbd7f58f9e8",
+    "identical": true,
+    "contributors": [
+      "op_a",
+      "op_b",
+      "op_c"
+    ],
+    "sum_ms": 6.927,
+    "bytes": 150568818
+  },
+  "solo": {
+    "party": "op_a",
+    "sample": [
+      -5724.094182413213,
+      5178.55556798786,
+      4632.705635963188,
+      3030.9203836624224
+    ]
+  },
+  "decrypted": {
+    "sample": [
+      0.0007157814675332666,
+      -0.00030708820768214667,
+      0.000543879817220887,
+      -0.0007605167355386785
+    ],
+    "solo_rel_err": 1867069.9328957023,
+    "weight_slot": 0.34009972975982106,
+    "n_values": 4685825,
+    "max_abs_diff_vs_recorded": 9.836406970162477e-07
+  },
+  "published": {
+    "round": 7,
+    "max_abs_diff_vs_recorded": 2.891489337365858e-06,
+    "max_abs_b": 0.039056528359651566,
+    "n_b_values": 4685824
+  },
+  "attacks": [
+    {
+      "attack": "fake_sum",
+      "victim": "op_b",
+      "asked": "op_a",
+      "refusal": "refuse: recomputed aggregate 86c74b38d93e\u2026 \u2260 requested 8c48a1a84d17\u2026"
+    },
+    {
+      "attack": "two_party_sum",
+      "contributors": [
+        "op_a",
+        "op_b"
+      ],
+      "asked": "op_a",
+      "refusal": "refuse: aggregate has 2 contributors, need \u2265 3"
+    },
+    {
+      "attack": "second_decryption",
+      "active": [
+        "op_a",
+        "op_b"
+      ],
+      "asked": "op_a",
+      "refusal": "refuse: one-shot: already shared for run modal_glimmer_E3 round 6 (active [op_a op_c], at 2026-11-02T10:59:56.433685Z)"
+    }
+  ],
+  "all_attacks_refused": true,
+  "step_ms": [
+    {
+      "step": "staged",
+      "party": null,
+      "ms": 140.4
+    },
+    {
+      "step": "aggregated",
+      "party": null,
+      "ms": 678.7
+    },
+    {
+      "step": "attack",
+      "party": null,
+      "ms": 614.6
+    },
+    {
+      "step": "attack",
+      "party": null,
+      "ms": 30.7
+    },
+    {
+      "step": "requested",
+      "party": null,
+      "ms": 25.1
+    },
+    {
+      "step": "share",
+      "party": "op_a",
+      "ms": 712.7
+    },
+    {
+      "step": "solo",
+      "party": "op_a",
+      "ms": 530.7
+    },
+    {
+      "step": "share",
+      "party": "op_c",
+      "ms": 738.4
+    },
+    {
+      "step": "decrypted",
+      "party": null,
+      "ms": 1215.3
+    },
+    {
+      "step": "published",
+      "party": null,
+      "ms": 414.0
+    },
+    {
+      "step": "attack",
+      "party": null,
+      "ms": 585.7
+    }
+  ],
+  "live_crypto_ms": 3900.8,
+  "binary": "crypto/bin/horizon-he",
+  "binary_sha256": "8d35944dd42f5ecad39814732f1f5b7dbafbccf09b9e4b30786a13eac7a81a1c"
+}

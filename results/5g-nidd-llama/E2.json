@@ -1,0 +1,591 @@
+{
+  "exp": "E2",
+  "mode": "plaintext",
+  "scenario": "none",
+  "run": "runs/modal_llama_E2",
+  "backend": "modal",
+  "model": "meta-llama/Llama-3.2-1B-Instruct",
+  "base_revision": "9213176726f574b556790deb65791e0c5aa438b6",
+  "layout_hash": "c39fe4f640a6ebc959543c82685c2d489ed36bdb7211f51ada47bc1cd2da5e47",
+  "lora_A_hash": "c6b0dfd6a7f2412b158b9ac3fb930146e2cc7c522f035e57c58a90fe5454ebec",
+  "n_values": 655361,
+  "rounds": [
+    {
+      "round": 1,
+      "contributors": [
+        "op_a",
+        "op_b",
+        "op_c"
+      ],
+      "mode": "insecure-reference",
+      "weight_sum": 0.34009999999999996,
+      "skipped_training": [],
+      "manifests": {
+        "op_a": {
+          "run_id": "modal_llama_E2",
+          "round": 1,
+          "operator": "op_a",
+          "layout_hash": "c39fe4f640a6ebc959543c82685c2d489ed36bdb7211f51ada47bc1cd2da5e47",
+          "lora_A_hash": "c6b0dfd6a7f2412b158b9ac3fb930146e2cc7c522f035e57c58a90fe5454ebec",
+          "base_revision": "9213176726f574b556790deb65791e0c5aa438b6",
+          "n_values": 655361,
+          "train_examples": 867,
+          "train_loss_final": 0.14965568352490663,
+          "train_ms": 10420,
+          "train_steps": 28,
+          "mps_peak_gb": 0.0,
+          "mode": "insecure-reference",
+          "path": "insecure/round_1/op_a.f64",
+          "created_at": "2026-10-29T00:06:57Z"
+        },
+        "op_b": {
+          "run_id": "modal_llama_E2",
+          "round": 1,
+          "operator": "op_b",
+          "layout_hash": "c39fe4f640a6ebc959543c82685c2d489ed36bdb7211f51ada47bc1cd2da5e47",
+          "lora_A_hash": "c6b0dfd6a7f2412b158b9ac3fb930146e2cc7c522f035e57c58a90fe5454ebec",
+          "base_revision": "9213176726f574b556790deb65791e0c5aa438b6",
+          "n_values": 655361,
+          "train_examples": 1352,
+          "train_loss_final": 0.2469501134008169,
+          "train_ms": 16554,
+          "train_steps": 43,
+          "mps_peak_gb": 0.0,
+          "mode": "insecure-reference",
+          "path": "insecure/round_1/op_b.f64",
+          "created_at": "2026-10-29T00:07:51Z"
+        },
+        "op_c": {
+          "run_id": "modal_llama_E2",
+          "round": 1,
+          "operator": "op_c",
+          "layout_hash": "c39fe4f640a6ebc959543c82685c2d489ed36bdb7211f51ada47bc1cd2da5e47",
+          "lora_A_hash": "c6b0dfd6a7f2412b158b9ac3fb930146e2cc7c522f035e57c58a90fe5454ebec",
+          "base_revision": "9213176726f574b556790deb65791e0c5aa438b6",
+          "n_values": 655361,
+          "train_examples": 1182,
+          "train_loss_final": 0.16611060537397862,
+          "train_ms": 13976,
+          "train_steps": 37,
+          "mps_peak_gb": 0.0,
+          "mode": "insecure-reference",
+          "path": "insecure/round_1/op_c.f64",
+          "created_at": "2026-10-29T00:08:27Z"
+        }
+      },
+      "eval": {
+        "round": 2,
+        "pred_sha256": "e8904f3ab2fc6b1386a613a808ce82bb5b640e156fe9dfc0a8c03916801fb2de",
+        "macro_f1": 0.029036004645760744
+      }
+    },
+    {
+      "round": 2,
+      "contributors": [
+        "op_a",
+        "op_b",
+        "op_c"
+      ],
+      "mode": "insecure-reference",
+      "weight_sum": 0.34009999999999996,
+      "skipped_training": [],
+      "manifests": {
+        "op_a": {
+          "run_id": "modal_llama_E2",
+          "round": 2,
+          "operator": "op_a",
+          "layout_hash": "c39fe4f640a6ebc959543c82685c2d489ed36bdb7211f51ada47bc1cd2da5e47",
+          "lora_A_hash": "c6b0dfd6a7f2412b158b9ac3fb930146e2cc7c522f035e57c58a90fe5454ebec",
+          "base_revision": "9213176726f574b556790deb65791e0c5aa438b6",
+          "n_values": 655361,
+          "train_examples": 867,
+          "train_loss_final": 0.11633080299943685,
+          "train_ms": 10473,
+          "train_steps": 28,
+          "mps_peak_gb": 0.0,
+          "mode": "insecure-reference",
+          "path": "insecure/round_2/op_a.f64",
+          "created_at": "2026-10-29T00:12:54Z"
+        },
+        "op_b": {
+          "run_id": "modal_llama_E2",
+          "round": 2,
+          "operator": "op_b",
+          "layout_hash": "c39fe4f640a6ebc959543c82685c2d489ed36bdb7211f51ada47bc1cd2da5e47",
+          "lora_A_hash": "c6b0dfd6a7f2412b158b9ac3fb930146e2cc7c522f035e57c58a90fe5454ebec",
+          "base_revision": "9213176726f574b556790deb65791e0c5aa438b6",
+          "n_values": 655361,
+          "train_examples": 1352,
+          "train_loss_final": 0.15901964642107486,
+          "train_ms": 16486,
+          "train_steps": 43,
+          "mps_peak_gb": 0.0,
+          "mode": "insecure-reference",
+          "path": "insecure/round_2/op_b.f64",
+          "created_at": "2026-10-29T00:13:35Z"
+        },
+        "op_c": {
+          "run_id": "modal_llama_E2",
+          "round": 2,
+          "operator": "op_c",
+          "layout_hash": "c39fe4f640a6ebc959543c82685c2d489ed36bdb7211f51ada47bc1cd2da5e47",
+          "lora_A_hash": "c6b0dfd6a7f2412b158b9ac3fb930146e2cc7c522f035e57c58a90fe5454ebec",
+          "base_revision": "9213176726f574b556790deb65791e0c5aa438b6",
+          "n_values": 655361,
+          "train_examples": 1182,
+          "train_loss_final": 0.03585767360054888,
+          "train_ms": 13480,
+          "train_steps": 37,
+          "mps_peak_gb": 0.0,
+          "mode": "insecure-reference",
+          "path": "insecure/round_2/op_c.f64",
+          "created_at": "2026-10-29T00:14:59Z"
+        }
+      },
+      "eval": {
+        "round": 3,
+        "pred_sha256": "67534d910aa5e89854085478598c2183a050bc28e15003c1776152ff2346e79a",
+        "macro_f1": 0.23137040981243936
+      }
+    },
+    {
+      "round": 3,
+      "contributors": [
+        "op_a",
+        "op_b",
+        "op_c"
+      ],
+      "mode": "insecure-reference",
+      "weight_sum": 0.34009999999999996,
+      "skipped_training": [],
+      "manifests": {
+        "op_a": {
+          "run_id": "modal_llama_E2",
+          "round": 3,
+          "operator": "op_a",
+          "layout_hash": "c39fe4f640a6ebc959543c82685c2d489ed36bdb7211f51ada47bc1cd2da5e47",
+          "lora_A_hash": "c6b0dfd6a7f2412b158b9ac3fb930146e2cc7c522f035e57c58a90fe5454ebec",
+          "base_revision": "9213176726f574b556790deb65791e0c5aa438b6",
+          "n_values": 655361,
+          "train_examples": 867,
+          "train_loss_final": 0.03662894177250564,
+          "train_ms": 11446,
+          "train_steps": 28,
+          "mps_peak_gb": 0.0,
+          "mode": "insecure-reference",
+          "path": "insecure/round_3/op_a.f64",
+          "created_at": "2026-10-29T00:19:37Z"
+        },
+        "op_b": {
+          "run_id": "modal_llama_E2",
+          "round": 3,
+          "operator": "op_b",
+          "layout_hash": "c39fe4f640a6ebc959543c82685c2d489ed36bdb7211f51ada47bc1cd2da5e47",
+          "lora_A_hash": "c6b0dfd6a7f2412b158b9ac3fb930146e2cc7c522f035e57c58a90fe5454ebec",
+          "base_revision": "9213176726f574b556790deb65791e0c5aa438b6",
+          "n_values": 655361,
+          "train_examples": 1352,
+          "train_loss_final": 0.09343310506083072,
+          "train_ms": 16525,
+          "train_steps": 43,
+          "mps_peak_gb": 0.0,
+          "mode": "insecure-reference",
+          "path": "insecure/round_3/op_b.f64",
+          "created_at": "2026-10-29T00:18:45Z"
+        },
+        "op_c": {
+          "run_id": "modal_llama_E2",
+          "round": 3,
+          "operator": "op_c",
+          "layout_hash": "c39fe4f640a6ebc959543c82685c2d489ed36bdb7211f51ada47bc1cd2da5e47",
+          "lora_A_hash": "c6b0dfd6a7f2412b158b9ac3fb930146e2cc7c522f035e57c58a90fe5454ebec",
+          "base_revision": "9213176726f574b556790deb65791e0c5aa438b6",
+          "n_values": 655361,
+          "train_examples": 1182,
+          "train_loss_final": 0.04759265460306779,
+          "train_ms": 14852,
+          "train_steps": 37,
+          "mps_peak_gb": 0.0,
+          "mode": "insecure-reference",
+          "path": "insecure/round_3/op_c.f64",
+          "created_at": "2026-10-29T00:21:04Z"
+        }
+      },
+      "eval": {
+        "round": 4,
+        "pred_sha256": "d7143223d9750a50abc1c168684554628a6350d979fc71ecca973098dc75a1a5",
+        "macro_f1": 0.5404047130856605
+      }
+    },
+    {
+      "round": 4,
+      "contributors": [
+        "op_a",
+        "op_b",
+        "op_c"
+      ],
+      "mode": "insecure-reference",
+      "weight_sum": 0.34009999999999996,
+      "skipped_training": [],
+      "manifests": {
+        "op_a": {
+          "run_id": "modal_llama_E2",
+          "round": 4,
+          "operator": "op_a",
+          "layout_hash": "c39fe4f640a6ebc959543c82685c2d489ed36bdb7211f51ada47bc1cd2da5e47",
+          "lora_A_hash": "c6b0dfd6a7f2412b158b9ac3fb930146e2cc7c522f035e57c58a90fe5454ebec",
+          "base_revision": "9213176726f574b556790deb65791e0c5aa438b6",
+          "n_values": 655361,
+          "train_examples": 867,
+          "train_loss_final": 0.015908743662294,
+          "train_ms": 10413,
+          "train_steps": 28,
+          "mps_peak_gb": 0.0,
+          "mode": "insecure-reference",
+          "path": "insecure/round_4/op_a.f64",
+          "created_at": "2026-10-29T00:23:16Z"
+        },
+        "op_b": {
+          "run_id": "modal_llama_E2",
+          "round": 4,
+          "operator": "op_b",
+          "layout_hash": "c39fe4f640a6ebc959543c82685c2d489ed36bdb7211f51ada47bc1cd2da5e47",
+          "lora_A_hash": "c6b0dfd6a7f2412b158b9ac3fb930146e2cc7c522f035e57c58a90fe5454ebec",
+          "base_revision": "9213176726f574b556790deb65791e0c5aa438b6",
+          "n_values": 655361,
+          "train_examples": 1352,
+          "train_loss_final": 0.0751084093702957,
+          "train_ms": 16421,
+          "train_steps": 43,
+          "mps_peak_gb": 0.0,
+          "mode": "insecure-reference",
+          "path": "insecure/round_4/op_b.f64",
+          "created_at": "2026-10-29T00:24:16Z"
+        },
+        "op_c": {
+          "run_id": "modal_llama_E2",
+          "round": 4,
+          "operator": "op_c",
+          "layout_hash": "c39fe4f640a6ebc959543c82685c2d489ed36bdb7211f51ada47bc1cd2da5e47",
+          "lora_A_hash": "c6b0dfd6a7f2412b158b9ac3fb930146e2cc7c522f035e57c58a90fe5454ebec",
+          "base_revision": "9213176726f574b556790deb65791e0c5aa438b6",
+          "n_values": 655361,
+          "train_examples": 1182,
+          "train_loss_final": 0.018750380084384233,
+          "train_ms": 13462,
+          "train_steps": 37,
+          "mps_peak_gb": 0.0,
+          "mode": "insecure-reference",
+          "path": "insecure/round_4/op_c.f64",
+          "created_at": "2026-10-29T00:23:16Z"
+        }
+      },
+      "eval": {
+        "round": 5,
+        "pred_sha256": "d0d4b7716968248d9f50c0b5f46a25a57cd4259d0617a237efbdd315ea7c9695",
+        "macro_f1": 0.7347971382955558
+      }
+    },
+    {
+      "round": 5,
+      "contributors": [
+        "op_a",
+        "op_b",
+        "op_c"
+      ],
+      "mode": "insecure-reference",
+      "weight_sum": 0.34009999999999996,
+      "skipped_training": [],
+      "manifests": {
+        "op_a": {
+          "run_id": "modal_llama_E2",
+          "round": 5,
+          "operator": "op_a",
+          "layout_hash": "c39fe4f640a6ebc959543c82685c2d489ed36bdb7211f51ada47bc1cd2da5e47",
+          "lora_A_hash": "c6b0dfd6a7f2412b158b9ac3fb930146e2cc7c522f035e57c58a90fe5454ebec",
+          "base_revision": "9213176726f574b556790deb65791e0c5aa438b6",
+          "n_values": 655361,
+          "train_examples": 867,
+          "train_loss_final": 0.028351214673602954,
+          "train_ms": 10529,
+          "train_steps": 28,
+          "mps_peak_gb": 0.0,
+          "mode": "insecure-reference",
+          "path": "insecure/round_5/op_a.f64",
+          "created_at": "2026-10-29T00:26:25Z"
+        },
+        "op_b": {
+          "run_id": "modal_llama_E2",
+          "round": 5,
+          "operator": "op_b",
+          "layout_hash": "c39fe4f640a6ebc959543c82685c2d489ed36bdb7211f51ada47bc1cd2da5e47",
+          "lora_A_hash": "c6b0dfd6a7f2412b158b9ac3fb930146e2cc7c522f035e57c58a90fe5454ebec",
+          "base_revision": "9213176726f574b556790deb65791e0c5aa438b6",
+          "n_values": 655361,
+          "train_examples": 1352,
+          "train_loss_final": 0.06530210525961593,
+          "train_ms": 16628,
+          "train_steps": 43,
+          "mps_peak_gb": 0.0,
+          "mode": "insecure-reference",
+          "path": "insecure/round_5/op_b.f64",
+          "created_at": "2026-10-29T00:27:13Z"
+        },
+        "op_c": {
+          "run_id": "modal_llama_E2",
+          "round": 5,
+          "operator": "op_c",
+          "layout_hash": "c39fe4f640a6ebc959543c82685c2d489ed36bdb7211f51ada47bc1cd2da5e47",
+          "lora_A_hash": "c6b0dfd6a7f2412b158b9ac3fb930146e2cc7c522f035e57c58a90fe5454ebec",
+          "base_revision": "9213176726f574b556790deb65791e0c5aa438b6",
+          "n_values": 655361,
+          "train_examples": 1182,
+          "train_loss_final": 0.040025493426946925,
+          "train_ms": 13738,
+          "train_steps": 37,
+          "mps_peak_gb": 0.0,
+          "mode": "insecure-reference",
+          "path": "insecure/round_5/op_c.f64",
+          "created_at": "2026-10-29T00:28:01Z"
+        }
+      },
+      "eval": {
+        "round": 6,
+        "pred_sha256": "eb1507e2f2ccde3b20278119b5334b73591740fc2f62da32a87db96f6078ab32",
+        "macro_f1": 0.8591229984615648
+      }
+    },
+    {
+      "round": 6,
+      "contributors": [
+        "op_a",
+        "op_b",
+        "op_c"
+      ],
+      "mode": "insecure-reference",
+      "weight_sum": 0.34009999999999996,
+      "skipped_training": [],
+      "manifests": {
+        "op_a": {
+          "run_id": "modal_llama_E2",
+          "round": 6,
+          "operator": "op_a",
+          "layout_hash": "c39fe4f640a6ebc959543c82685c2d489ed36bdb7211f51ada47bc1cd2da5e47",
+          "lora_A_hash": "c6b0dfd6a7f2412b158b9ac3fb930146e2cc7c522f035e57c58a90fe5454ebec",
+          "base_revision": "9213176726f574b556790deb65791e0c5aa438b6",
+          "n_values": 655361,
+          "train_examples": 867,
+          "train_loss_final": 0.033905074961512585,
+          "train_ms": 10374,
+          "train_steps": 28,
+          "mps_peak_gb": 0.0,
+          "mode": "insecure-reference",
+          "path": "insecure/round_6/op_a.f64",
+          "created_at": "2026-10-29T00:30:40Z"
+        },
+        "op_b": {
+          "run_id": "modal_llama_E2",
+          "round": 6,
+          "operator": "op_b",
+          "layout_hash": "c39fe4f640a6ebc959543c82685c2d489ed36bdb7211f51ada47bc1cd2da5e47",
+          "lora_A_hash": "c6b0dfd6a7f2412b158b9ac3fb930146e2cc7c522f035e57c58a90fe5454ebec",
+          "base_revision": "9213176726f574b556790deb65791e0c5aa438b6",
+          "n_values": 655361,
+          "train_examples": 1352,
+          "train_loss_final": 0.024177501890517306,
+          "train_ms": 16523,
+          "train_steps": 43,
+          "mps_peak_gb": 0.0,
+          "mode": "insecure-reference",
+          "path": "insecure/round_6/op_b.f64",
+          "created_at": "2026-10-29T00:30:51Z"
+        },
+        "op_c": {
+          "run_id": "modal_llama_E2",
+          "round": 6,
+          "operator": "op_c",
+          "layout_hash": "c39fe4f640a6ebc959543c82685c2d489ed36bdb7211f51ada47bc1cd2da5e47",
+          "lora_A_hash": "c6b0dfd6a7f2412b158b9ac3fb930146e2cc7c522f035e57c58a90fe5454ebec",
+          "base_revision": "9213176726f574b556790deb65791e0c5aa438b6",
+          "n_values": 655361,
+          "train_examples": 1182,
+          "train_loss_final": 0.04053396982781123,
+          "train_ms": 13559,
+          "train_steps": 37,
+          "mps_peak_gb": 0.0,
+          "mode": "insecure-reference",
+          "path": "insecure/round_6/op_c.f64",
+          "created_at": "2026-10-29T00:30:48Z"
+        }
+      },
+      "eval": {
+        "round": 7,
+        "pred_sha256": "d90ac2ec69eabb0717e5f7e2c233a21f83970d0a75a752dee7d725caa3f4d840",
+        "macro_f1": 0.9173461134355176
+      }
+    }
+  ],
+  "final": {
+    "round": 7,
+    "n_test": 998,
+    "pred_sha256": "d90ac2ec69eabb0717e5f7e2c233a21f83970d0a75a752dee7d725caa3f4d840",
+    "metrics": {
+      "accuracy": 0.9218436873747495,
+      "macro_f1": 0.9173461134355176,
+      "per_class": {
+        "benign": {
+          "recall": 0.9933333333333333,
+          "precision": 0.8324022346368715,
+          "f1": 0.9057750759878419,
+          "support": 150
+        },
+        "udp_flood": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "support": 32
+        },
+        "icmp_flood": {
+          "recall": 0.9611650485436893,
+          "precision": 0.8918918918918919,
+          "f1": 0.9252336448598131,
+          "support": 103
+        },
+        "syn_flood": {
+          "recall": 0.9933333333333333,
+          "precision": 1.0,
+          "f1": 0.9966555183946488,
+          "support": 150
+        },
+        "http_flood": {
+          "recall": 0.8266666666666667,
+          "precision": 0.9841269841269841,
+          "f1": 0.898550724637681,
+          "support": 150
+        },
+        "slowrate_dos": {
+          "recall": 0.9333333333333333,
+          "precision": 0.9790209790209791,
+          "f1": 0.9556313993174061,
+          "support": 150
+        },
+        "syn_scan": {
+          "recall": 0.93,
+          "precision": 0.808695652173913,
+          "f1": 0.8651162790697675,
+          "support": 100
+        },
+        "tcp_connect_scan": {
+          "recall": 0.7692307692307693,
+          "precision": 0.8163265306122449,
+          "f1": 0.7920792079207921,
+          "support": 52
+        },
+        "udp_scan": {
+          "recall": 0.8468468468468469,
+          "precision": 1.0,
+          "f1": 0.9170731707317074,
+          "support": 111
+        }
+      },
+      "eval_ms": 77396,
+      "mps_peak_gb": 0.0
+    }
+  },
+  "metrics": {
+    "accuracy": 0.9218436873747495,
+    "macro_f1": 0.9173461134355176,
+    "per_class": {
+      "benign": {
+        "recall": 0.9933333333333333,
+        "precision": 0.8324022346368715,
+        "f1": 0.9057750759878419,
+        "support": 150
+      },
+      "udp_flood": {
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "support": 32
+      },
+      "icmp_flood": {
+        "recall": 0.9611650485436893,
+        "precision": 0.8918918918918919,
+        "f1": 0.9252336448598131,
+        "support": 103
+      },
+      "syn_flood": {
+        "recall": 0.9933333333333333,
+        "precision": 1.0,
+        "f1": 0.9966555183946488,
+        "support": 150
+      },
+      "http_flood": {
+        "recall": 0.8266666666666667,
+        "precision": 0.9841269841269841,
+        "f1": 0.898550724637681,
+        "support": 150
+      },
+      "slowrate_dos": {
+        "recall": 0.9333333333333333,
+        "precision": 0.9790209790209791,
+        "f1": 0.9556313993174061,
+        "support": 150
+      },
+      "syn_scan": {
+        "recall": 0.93,
+        "precision": 0.808695652173913,
+        "f1": 0.8651162790697675,
+        "support": 100
+      },
+      "tcp_connect_scan": {
+        "recall": 0.7692307692307693,
+        "precision": 0.8163265306122449,
+        "f1": 0.7920792079207921,
+        "support": 52
+      },
+      "udp_scan": {
+        "recall": 0.8468468468468469,
+        "precision": 1.0,
+        "f1": 0.9170731707317074,
+        "support": 111
+      }
+    },
+    "eval_ms": 77396,
+    "mps_peak_gb": 0.0
+  },
+  "pred_sha256": "d90ac2ec69eabb0717e5f7e2c233a21f83970d0a75a752dee7d725caa3f4d840",
+  "crypto": null,
+  "total_s": 1596.2,
+  "smoke": false,
+  "modal_est_usd": 0.3851,
+  "modal_gpu": "A10",
+  "modal_device": "NVIDIA A10",
+  "device_mismatches": [
+    {
+      "step": "r3_op_a_train",
+      "wanted": "NVIDIA A10",
+      "got": "NVIDIA A10G"
+    },
+    {
+      "step": "r3_op_c_train",
+      "wanted": "NVIDIA A10",
+      "got": "NVIDIA A10G"
+    },
+    {
+      "step": "r5_op_b_train",
+      "wanted": "NVIDIA A10",
+      "got": "NVIDIA A10G"
+    },
+    {
+      "step": "r5_op_c_train",
+      "wanted": "NVIDIA A10",
+      "got": "NVIDIA A10G"
+    },
+    {
+      "step": "eval_round_6",
+      "wanted": "NVIDIA A10",
+      "got": "NVIDIA A10G"
+    }
+  ]
+}

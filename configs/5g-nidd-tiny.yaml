@@ -1,0 +1,26 @@
+# Local CPU pipeline check: a tiny random model on the real shards. It runs every step of the
+# encrypted federated loop on a laptop in minutes, with no account. Its weights are random, so its
+# accuracy means nothing. Build the model first: python -m horizon.model.tiny --out models/tiny
+model:
+  id: models/tiny
+  revision: main
+  dtype: float32
+  device: cpu
+lora:
+  r: 8
+  alpha: 16
+  target_modules: [q_proj, k_proj, v_proj, o_proj]
+train:
+  lr: 1.0e-3
+  batch_size: 4
+  micro_batch: 2
+  local_epochs: 0.5
+  rounds: 3
+  seed: 1234
+  adapter_seed: 4321
+  restrict_missing_labels: true
+data_dir: data/processed
+results_dir: runs/5g-nidd-tiny/results  # never results/: these numbers mean nothing
+eval:
+  batch_flows: 4
+  every_round: true

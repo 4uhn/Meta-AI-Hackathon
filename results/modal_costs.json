@@ -1,0 +1,57 @@
+{
+ "source": "modal billing report, by app id",
+ "configs": {
+  "5g-nidd-tiny-modal.yaml": {
+   "E3 (pipeline test, 3 rounds, --max-steps 2)": {
+    "usd": 0.03,
+    "minutes": 3.8,
+    "app": "ap-IWg8hyMh5kNoV2gRD3RYLs",
+    "date": "2026-11-03"
+   }
+  },
+  "5g-nidd-llama.yaml": {
+   "E3": {
+    "usd": 0.67,
+    "minutes": 39.6,
+    "app": "ap-A3I6NhJqtH1OJUziFmg7SX",
+    "date": "2026-11-03"
+   },
+   "weights download (once)": {
+    "usd": 0.0,
+    "minutes": 0.6,
+    "app": "ap-c1KGaOo2OiN9DTxnnvvwTC",
+    "date": "2026-11-03"
+   }
+  },
+  "5g-nidd-glimmer.yaml": {
+   "E3": {
+    "usd": 3.37,
+    "minutes": 61.8,
+    "app": "ap-05eqBYetjXnHP3q8hwacvH",
+    "date": "2026-10-29"
+   },
+   "E0, E1a-c, E4 (in parallel)": {
+    "usd": 5.73,
+    "minutes": 53.7,
+    "app": "ap-GE62zGXKLgsTaJsMIof8I8",
+    "date": "2026-10-29"
+   }
+  },
+  "asrs-glimmer.yaml": {
+   "E3": {
+    "usd": 7.42,
+    "minutes": 117.0,
+    "app": "ap-6nYRSs8cYyOWCHgOrFWvuL",
+    "date": "2026-10-30"
+   }
+  },
+  "asrs4-glimmer.yaml": {
+   "E3": {
+    "usd": 8.71,
+    "minutes": 119.6,
+    "app": "ap-9VLCUihVnWMomdcO7IxbVT",
+    "date": "2026-10-30"
+   }
+  }
+ }
+}

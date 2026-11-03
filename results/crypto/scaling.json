@@ -1,0 +1,612 @@
+{
+  "machine": {
+    "go": "go1.27.3",
+    "goarch": "arm64",
+    "goos": "darwin",
+    "num_cpu": 10,
+    "workers": 10
+  },
+  "n_values": 4685825,
+  "note": "per shape: selftest (one round per t-subset, all attack checks) and bench (one round); crypto-only times are medians over the selftest rounds; max_abs_err is the max over those rounds",
+  "rows": [
+    {
+      "aggregate_ms_median": 9.233,
+      "bench_max_abs_err": 7.521503617990977e-7,
+      "bytes_aggregate": 150568818,
+      "bytes_dec_share": 75244520,
+      "bytes_per_submission": 150568818,
+      "combine_ms_median": 412.108,
+      "dec_share_ms_median": 123.2475,
+      "encrypt_ms_median": 359.331,
+      "flood_log_width": 85,
+      "max_abs_err": 8.010367900639775e-7,
+      "max_abs_err_tolerance": 0.000001,
+      "max_abs_value": 4,
+      "min_contributors": 3,
+      "n_ciphertexts": 287,
+      "n_parties": 3,
+      "partial_rel_err_min": 535076.0037781738,
+      "selftest_checks": [
+        {
+          "name": "isolation",
+          "ok": true,
+          "detail": "aggregator→op_a/secret: true; op_b→op_a/secret: true; op_b→op_a inbox: true"
+        },
+        {
+          "name": "sk erased after setup",
+          "ok": true,
+          "detail": "only tsk.bin remains in each secret/ dir"
+        },
+        {
+          "name": "round 1: submit [op_a op_b op_c], decrypt with [op_a op_b]",
+          "ok": true,
+          "detail": "max abs err 7.25e-07"
+        },
+        {
+          "name": "round 1: op_a's share alone is noise",
+          "ok": true,
+          "detail": "relative error 5.35e+05"
+        },
+        {
+          "name": "round 2: submit [op_a op_b op_c], decrypt with [op_a op_c]",
+          "ok": true,
+          "detail": "max abs err 7.72e-07"
+        },
+        {
+          "name": "round 2: op_a's share alone is noise",
+          "ok": true,
+          "detail": "relative error 5.35e+05"
+        },
+        {
+          "name": "round 3: submit [op_a op_b op_c], decrypt with [op_b op_c]",
+          "ok": true,
+          "detail": "max abs err 8.01e-07"
+        },
+        {
+          "name": "round 3: op_b's share alone is noise",
+          "ok": true,
+          "detail": "relative error 5.35e+05"
+        },
+        {
+          "name": "one-shot: same request again",
+          "ok": true,
+          "detail": "refuse: one-shot: already shared for run run round 1 (active [op_a op_b], at 2026-10-31T00:00:27.900157Z)"
+        },
+        {
+          "name": "one-shot: new active set, same round",
+          "ok": true,
+          "detail": "refuse: one-shot: already shared for run run round 1 (active [op_a op_b], at 2026-10-31T00:00:28.675763Z)"
+        },
+        {
+          "name": "round 4: op_c skipped → aggregation refused (2 contributors)",
+          "ok": true,
+          "detail": "round 4: 2 valid submissions (rejected: map[]), need ≥ 3"
+        },
+        {
+          "name": "refuse: genuine 2-contributor sum (each would learn the other's update)",
+          "ok": true,
+          "detail": "op_a: refuse: aggregate has 2 contributors, need ≥ 3; op_c: refuse: aggregate has 2 contributors, need ≥ 3"
+        },
+        {
+          "name": "refuse: individual ciphertext labelled as aggregate",
+          "ok": true,
+          "detail": "refuse: recomputed aggregate 6c6fc790aff9… ≠ requested 5e001d01c0a2…"
+        },
+        {
+          "name": "refuse: aggregate with a single contributor",
+          "ok": true,
+          "detail": "refuse: aggregate has 1 contributors, need ≥ 3"
+        },
+        {
+          "name": "reject: tampered ct (op_c) and replayed round-1 submission (op_b)",
+          "ok": true,
+          "detail": "round 6: 1 valid submissions (rejected: map[op_b:statement round 1, want 6 (replayed submission?) op_c:ct.bin sha256 does not match the signed statement]), need ≥ 3"
+        }
+      ],
+      "selftest_ok_all": true,
+      "selftest_passed": 15,
+      "selftest_rounds": 3,
+      "threshold": 2,
+      "tolerated_offline": 1,
+      "verify_ms_bench": 505.486
+    },
+    {
+      "aggregate_ms_median": 11.753499999999999,
+      "bench_max_abs_err": 0.000001703917651710513,
+      "bytes_aggregate": 150568818,
+      "bytes_dec_share": 75244520,
+      "bytes_per_submission": 150568818,
+      "combine_ms_median": 343.269,
+      "dec_share_ms_median": 122.61699999999999,
+      "encrypt_ms_median": 337.00199999999995,
+      "flood_log_width": 86,
+      "max_abs_err": 0.000001795560506185484,
+      "max_abs_err_tolerance": 0.000002449489742783178,
+      "max_abs_value": 2,
+      "min_contributors": 4,
+      "n_ciphertexts": 287,
+      "n_parties": 4,
+      "partial_rel_err_min": 476185.5975902047,
+      "selftest_checks": [
+        {
+          "name": "isolation",
+          "ok": true,
+          "detail": "aggregator→op_a/secret: true; op_b→op_a/secret: true; op_b→op_a inbox: true"
+        },
+        {
+          "name": "sk erased after setup",
+          "ok": true,
+          "detail": "only tsk.bin remains in each secret/ dir"
+        },
+        {
+          "name": "round 1: submit [op_a op_b op_c op_d], decrypt with [op_a op_b op_c]",
+          "ok": true,
+          "detail": "max abs err 1.76e-06"
+        },
+        {
+          "name": "round 1: op_a's share alone is noise",
+          "ok": true,
+          "detail": "relative error 4.76e+05"
+        },
+        {
+          "name": "round 1: 2 of 3 shares [op_a op_b] are noise",
+          "ok": true,
+          "detail": "relative error 4.76e+05"
+        },
+        {
+          "name": "round 2: submit [op_a op_b op_c op_d], decrypt with [op_a op_b op_d]",
+          "ok": true,
+          "detail": "max abs err 1.80e-06"
+        },
+        {
+          "name": "round 2: op_a's share alone is noise",
+          "ok": true,
+          "detail": "relative error 4.76e+05"
+        },
+        {
+          "name": "round 2: 2 of 3 shares [op_a op_b] are noise",
+          "ok": true,
+          "detail": "relative error 4.76e+05"
+        },
+        {
+          "name": "round 3: submit [op_a op_b op_c op_d], decrypt with [op_a op_c op_d]",
+          "ok": true,
+          "detail": "max abs err 1.74e-06"
+        },
+        {
+          "name": "round 3: op_a's share alone is noise",
+          "ok": true,
+          "detail": "relative error 4.76e+05"
+        },
+        {
+          "name": "round 3: 2 of 3 shares [op_a op_c] are noise",
+          "ok": true,
+          "detail": "relative error 4.76e+05"
+        },
+        {
+          "name": "round 4: submit [op_a op_b op_c op_d], decrypt with [op_b op_c op_d]",
+          "ok": true,
+          "detail": "max abs err 1.76e-06"
+        },
+        {
+          "name": "round 4: op_b's share alone is noise",
+          "ok": true,
+          "detail": "relative error 4.76e+05"
+        },
+        {
+          "name": "round 4: 2 of 3 shares [op_b op_c] are noise",
+          "ok": true,
+          "detail": "relative error 4.76e+05"
+        },
+        {
+          "name": "one-shot: same request again",
+          "ok": true,
+          "detail": "refuse: one-shot: already shared for run run round 1 (active [op_a op_b op_c], at 2026-10-31T00:00:58.768955Z)"
+        },
+        {
+          "name": "one-shot: new active set, same round",
+          "ok": true,
+          "detail": "refuse: one-shot: already shared for run run round 1 (active [op_a op_b op_c], at 2026-10-31T00:00:59.571428Z)"
+        },
+        {
+          "name": "round 5: op_d skipped → aggregation refused (3 contributors)",
+          "ok": true,
+          "detail": "round 5: 3 valid submissions (rejected: map[]), need ≥ 4"
+        },
+        {
+          "name": "refuse: genuine 3-contributor sum (2 colluders would learn an individual update)",
+          "ok": true,
+          "detail": "op_a: refuse: aggregate has 3 contributors, need ≥ 4; op_b: refuse: aggregate has 3 contributors, need ≥ 4; op_d: refuse: aggregate has 3 contributors, need ≥ 4"
+        },
+        {
+          "name": "refuse: individual ciphertext labelled as aggregate",
+          "ok": true,
+          "detail": "refuse: recomputed aggregate e847041849ee… ≠ requested 0e2c33866ca3…"
+        },
+        {
+          "name": "refuse: aggregate with a single contributor",
+          "ok": true,
+          "detail": "refuse: aggregate has 1 contributors, need ≥ 4"
+        },
+        {
+          "name": "reject: tampered ct (op_c) and replayed round-1 submission (op_b)",
+          "ok": true,
+          "detail": "round 7: 2 valid submissions (rejected: map[op_b:statement round 1, want 7 (replayed submission?) op_c:ct.bin sha256 does not match the signed statement]), need ≥ 4"
+        }
+      ],
+      "selftest_ok_all": true,
+      "selftest_passed": 21,
+      "selftest_rounds": 4,
+      "threshold": 3,
+      "tolerated_offline": 1,
+      "verify_ms_bench": 642.518
+    },
+    {
+      "aggregate_ms_median": 10.231,
+      "bench_max_abs_err": 0.0000034444600905264577,
+      "bytes_aggregate": 150568818,
+      "bytes_dec_share": 75244520,
+      "bytes_per_submission": 150568818,
+      "combine_ms_median": 364.5465,
+      "dec_share_ms_median": 125.938,
+      "encrypt_ms_median": 391.119,
+      "flood_log_width": 87,
+      "max_abs_err": 0.000003990401305750072,
+      "max_abs_err_tolerance": 0.000004898979485566356,
+      "max_abs_value": 2,
+      "min_contributors": 4,
+      "n_ciphertexts": 287,
+      "n_parties": 5,
+      "partial_rel_err_min": 413301.61920948006,
+      "selftest_checks": [
+        {
+          "name": "isolation",
+          "ok": true,
+          "detail": "aggregator→op_a/secret: true; op_b→op_a/secret: true; op_b→op_a inbox: true"
+        },
+        {
+          "name": "sk erased after setup",
+          "ok": true,
+          "detail": "only tsk.bin remains in each secret/ dir"
+        },
+        {
+          "name": "round 1: submit [op_a op_b op_c op_d op_e], decrypt with [op_a op_b op_c]",
+          "ok": true,
+          "detail": "max abs err 3.56e-06"
+        },
+        {
+          "name": "round 1: op_a's share alone is noise",
+          "ok": true,
+          "detail": "relative error 4.14e+05"
+        },
+        {
+          "name": "round 1: 2 of 3 shares [op_a op_b] are noise",
+          "ok": true,
+          "detail": "relative error 4.13e+05"
+        },
+        {
+          "name": "round 2: submit [op_a op_b op_c op_d op_e], decrypt with [op_a op_b op_d]",
+          "ok": true,
+          "detail": "max abs err 3.66e-06"
+        },
+        {
+          "name": "round 2: op_a's share alone is noise",
+          "ok": true,
+          "detail": "relative error 4.14e+05"
+        },
+        {
+          "name": "round 2: 2 of 3 shares [op_a op_b] are noise",
+          "ok": true,
+          "detail": "relative error 4.14e+05"
+        },
+        {
+          "name": "round 3: submit [op_a op_b op_c op_d op_e], decrypt with [op_a op_b op_e]",
+          "ok": true,
+          "detail": "max abs err 3.44e-06"
+        },
+        {
+          "name": "round 3: op_a's share alone is noise",
+          "ok": true,
+          "detail": "relative error 4.14e+05"
+        },
+        {
+          "name": "round 3: 2 of 3 shares [op_a op_b] are noise",
+          "ok": true,
+          "detail": "relative error 4.14e+05"
+        },
+        {
+          "name": "round 4: submit [op_a op_b op_c op_d op_e], decrypt with [op_a op_c op_d]",
+          "ok": true,
+          "detail": "max abs err 3.99e-06"
+        },
+        {
+          "name": "round 4: op_a's share alone is noise",
+          "ok": true,
+          "detail": "relative error 4.14e+05"
+        },
+        {
+          "name": "round 4: 2 of 3 shares [op_a op_c] are noise",
+          "ok": true,
+          "detail": "relative error 4.14e+05"
+        },
+        {
+          "name": "round 5: submit [op_a op_b op_c op_d op_e], decrypt with [op_a op_c op_e]",
+          "ok": true,
+          "detail": "max abs err 3.53e-06"
+        },
+        {
+          "name": "round 5: op_a's share alone is noise",
+          "ok": true,
+          "detail": "relative error 4.14e+05"
+        },
+        {
+          "name": "round 5: 2 of 3 shares [op_a op_c] are noise",
+          "ok": true,
+          "detail": "relative error 4.14e+05"
+        },
+        {
+          "name": "round 6: submit [op_a op_b op_c op_d op_e], decrypt with [op_a op_d op_e]",
+          "ok": true,
+          "detail": "max abs err 3.54e-06"
+        },
+        {
+          "name": "round 6: op_a's share alone is noise",
+          "ok": true,
+          "detail": "relative error 4.14e+05"
+        },
+        {
+          "name": "round 6: 2 of 3 shares [op_a op_d] are noise",
+          "ok": true,
+          "detail": "relative error 4.14e+05"
+        },
+        {
+          "name": "round 7: submit [op_a op_b op_c op_d op_e], decrypt with [op_b op_c op_d]",
+          "ok": true,
+          "detail": "max abs err 3.38e-06"
+        },
+        {
+          "name": "round 7: op_b's share alone is noise",
+          "ok": true,
+          "detail": "relative error 4.14e+05"
+        },
+        {
+          "name": "round 7: 2 of 3 shares [op_b op_c] are noise",
+          "ok": true,
+          "detail": "relative error 4.14e+05"
+        },
+        {
+          "name": "round 8: submit [op_a op_b op_c op_d op_e], decrypt with [op_b op_c op_e]",
+          "ok": true,
+          "detail": "max abs err 3.39e-06"
+        },
+        {
+          "name": "round 8: op_b's share alone is noise",
+          "ok": true,
+          "detail": "relative error 4.13e+05"
+        },
+        {
+          "name": "round 8: 2 of 3 shares [op_b op_c] are noise",
+          "ok": true,
+          "detail": "relative error 4.13e+05"
+        },
+        {
+          "name": "round 9: submit [op_a op_b op_c op_d op_e], decrypt with [op_b op_d op_e]",
+          "ok": true,
+          "detail": "max abs err 3.82e-06"
+        },
+        {
+          "name": "round 9: op_b's share alone is noise",
+          "ok": true,
+          "detail": "relative error 4.14e+05"
+        },
+        {
+          "name": "round 9: 2 of 3 shares [op_b op_d] are noise",
+          "ok": true,
+          "detail": "relative error 4.14e+05"
+        },
+        {
+          "name": "round 10: submit [op_a op_b op_c op_d op_e], decrypt with [op_c op_d op_e]",
+          "ok": true,
+          "detail": "max abs err 3.70e-06"
+        },
+        {
+          "name": "round 10: op_c's share alone is noise",
+          "ok": true,
+          "detail": "relative error 4.14e+05"
+        },
+        {
+          "name": "round 10: 2 of 3 shares [op_c op_d] are noise",
+          "ok": true,
+          "detail": "relative error 4.14e+05"
+        },
+        {
+          "name": "one-shot: same request again",
+          "ok": true,
+          "detail": "refuse: one-shot: already shared for run run round 1 (active [op_a op_b op_c], at 2026-10-31T00:01:53.659298Z)"
+        },
+        {
+          "name": "one-shot: new active set, same round",
+          "ok": true,
+          "detail": "refuse: one-shot: already shared for run run round 1 (active [op_a op_b op_c], at 2026-10-31T00:01:55.457518Z)"
+        },
+        {
+          "name": "round 11: op_d, op_e skipped → aggregation refused (3 contributors)",
+          "ok": true,
+          "detail": "round 11: 3 valid submissions (rejected: map[]), need ≥ 4"
+        },
+        {
+          "name": "refuse: genuine 3-contributor sum (2 colluders would learn an individual update)",
+          "ok": true,
+          "detail": "op_a: refuse: aggregate has 3 contributors, need ≥ 4; op_b: refuse: aggregate has 3 contributors, need ≥ 4; op_d: refuse: aggregate has 3 contributors, need ≥ 4"
+        },
+        {
+          "name": "refuse: individual ciphertext labelled as aggregate",
+          "ok": true,
+          "detail": "refuse: recomputed aggregate b39b67e74657… ≠ requested 9dcdd17cea3f…"
+        },
+        {
+          "name": "refuse: aggregate with a single contributor",
+          "ok": true,
+          "detail": "refuse: aggregate has 1 contributors, need ≥ 4"
+        },
+        {
+          "name": "reject: tampered ct (op_c) and replayed round-1 submission (op_b)",
+          "ok": true,
+          "detail": "round 13: 3 valid submissions (rejected: map[op_b:statement round 1, want 13 (replayed submission?) op_c:ct.bin sha256 does not match the signed statement]), need ≥ 4"
+        }
+      ],
+      "selftest_ok_all": true,
+      "selftest_passed": 39,
+      "selftest_rounds": 10,
+      "threshold": 3,
+      "tolerated_offline": 2,
+      "verify_ms_bench": 665.319
+    },
+    {
+      "aggregate_ms_median": 9.497,
+      "bench_max_abs_err": 0.0000043883129237903135,
+      "bytes_aggregate": 150568818,
+      "bytes_dec_share": 75244520,
+      "bytes_per_submission": 150568818,
+      "combine_ms_median": 342.682,
+      "dec_share_ms_median": 124.1675,
+      "encrypt_ms_median": 362.708,
+      "flood_log_width": 87,
+      "max_abs_err": 0.0000043183796464628214,
+      "max_abs_err_tolerance": 0.000005656854249492381,
+      "max_abs_value": 2,
+      "min_contributors": 5,
+      "n_ciphertexts": 287,
+      "n_parties": 5,
+      "partial_rel_err_min": 413534.5543195129,
+      "selftest_checks": [
+        {
+          "name": "isolation",
+          "ok": true,
+          "detail": "aggregator→op_a/secret: true; op_b→op_a/secret: true; op_b→op_a inbox: true"
+        },
+        {
+          "name": "sk erased after setup",
+          "ok": true,
+          "detail": "only tsk.bin remains in each secret/ dir"
+        },
+        {
+          "name": "round 1: submit [op_a op_b op_c op_d op_e], decrypt with [op_a op_b op_c op_d]",
+          "ok": true,
+          "detail": "max abs err 4.19e-06"
+        },
+        {
+          "name": "round 1: op_a's share alone is noise",
+          "ok": true,
+          "detail": "relative error 4.14e+05"
+        },
+        {
+          "name": "round 1: 3 of 4 shares [op_a op_b op_c] are noise",
+          "ok": true,
+          "detail": "relative error 4.14e+05"
+        },
+        {
+          "name": "round 2: submit [op_a op_b op_c op_d op_e], decrypt with [op_a op_b op_c op_e]",
+          "ok": true,
+          "detail": "max abs err 3.85e-06"
+        },
+        {
+          "name": "round 2: op_a's share alone is noise",
+          "ok": true,
+          "detail": "relative error 4.14e+05"
+        },
+        {
+          "name": "round 2: 3 of 4 shares [op_a op_b op_c] are noise",
+          "ok": true,
+          "detail": "relative error 4.14e+05"
+        },
+        {
+          "name": "round 3: submit [op_a op_b op_c op_d op_e], decrypt with [op_a op_b op_d op_e]",
+          "ok": true,
+          "detail": "max abs err 3.96e-06"
+        },
+        {
+          "name": "round 3: op_a's share alone is noise",
+          "ok": true,
+          "detail": "relative error 4.14e+05"
+        },
+        {
+          "name": "round 3: 3 of 4 shares [op_a op_b op_d] are noise",
+          "ok": true,
+          "detail": "relative error 4.14e+05"
+        },
+        {
+          "name": "round 4: submit [op_a op_b op_c op_d op_e], decrypt with [op_a op_c op_d op_e]",
+          "ok": true,
+          "detail": "max abs err 4.32e-06"
+        },
+        {
+          "name": "round 4: op_a's share alone is noise",
+          "ok": true,
+          "detail": "relative error 4.14e+05"
+        },
+        {
+          "name": "round 4: 3 of 4 shares [op_a op_c op_d] are noise",
+          "ok": true,
+          "detail": "relative error 4.14e+05"
+        },
+        {
+          "name": "round 5: submit [op_a op_b op_c op_d op_e], decrypt with [op_b op_c op_d op_e]",
+          "ok": true,
+          "detail": "max abs err 4.10e-06"
+        },
+        {
+          "name": "round 5: op_b's share alone is noise",
+          "ok": true,
+          "detail": "relative error 4.14e+05"
+        },
+        {
+          "name": "round 5: 3 of 4 shares [op_b op_c op_d] are noise",
+          "ok": true,
+          "detail": "relative error 4.14e+05"
+        },
+        {
+          "name": "one-shot: same request again",
+          "ok": true,
+          "detail": "refuse: one-shot: already shared for run run round 1 (active [op_a op_b op_c op_d], at 2026-10-31T00:03:49.449328Z)"
+        },
+        {
+          "name": "one-shot: new active set, same round",
+          "ok": true,
+          "detail": "refuse: one-shot: already shared for run run round 1 (active [op_a op_b op_c op_d], at 2026-10-31T00:03:50.316494Z)"
+        },
+        {
+          "name": "round 6: op_e skipped → aggregation refused (4 contributors)",
+          "ok": true,
+          "detail": "round 6: 4 valid submissions (rejected: map[]), need ≥ 5"
+        },
+        {
+          "name": "refuse: genuine 4-contributor sum (3 colluders would learn an individual update)",
+          "ok": true,
+          "detail": "op_a: refuse: aggregate has 4 contributors, need ≥ 5; op_b: refuse: aggregate has 4 contributors, need ≥ 5; op_c: refuse: aggregate has 4 contributors, need ≥ 5; op_e: refuse: aggregate has 4 contributors, need ≥ 5"
+        },
+        {
+          "name": "refuse: individual ciphertext labelled as aggregate",
+          "ok": true,
+          "detail": "refuse: recomputed aggregate d033f0edd358… ≠ requested 5dadea40c396…"
+        },
+        {
+          "name": "refuse: aggregate with a single contributor",
+          "ok": true,
+          "detail": "refuse: aggregate has 1 contributors, need ≥ 5"
+        },
+        {
+          "name": "reject: tampered ct (op_c) and replayed round-1 submission (op_b)",
+          "ok": true,
+          "detail": "round 8: 3 valid submissions (rejected: map[op_b:statement round 1, want 8 (replayed submission?) op_c:ct.bin sha256 does not match the signed statement]), need ≥ 5"
+        }
+      ],
+      "selftest_ok_all": true,
+      "selftest_passed": 24,
+      "selftest_rounds": 5,
+      "threshold": 4,
+      "tolerated_offline": 1,
+      "verify_ms_bench": 709.268
+    }
+  ]
+}

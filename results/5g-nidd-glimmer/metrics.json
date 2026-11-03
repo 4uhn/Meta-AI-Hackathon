@@ -1,0 +1,178 @@
+{
+  "source_files": [
+    "E0.json",
+    "E1a.json",
+    "E1b.json",
+    "E1c.json",
+    "E2.json",
+    "E3.json",
+    "E4.json"
+  ],
+  "recall": {
+    "E0": {
+      "benign": 0.7533333333333333,
+      "udp_flood": 0.0,
+      "icmp_flood": 0.0,
+      "syn_flood": 0.0,
+      "http_flood": 0.0,
+      "slowrate_dos": 0.0,
+      "syn_scan": 0.0,
+      "tcp_connect_scan": 0.0,
+      "udp_scan": 0.0
+    },
+    "E1a": {
+      "benign": 1.0,
+      "udp_flood": 1.0,
+      "icmp_flood": 1.0,
+      "syn_flood": 0.0,
+      "http_flood": 0.0,
+      "slowrate_dos": 0.0,
+      "syn_scan": 0.92,
+      "tcp_connect_scan": 0.0,
+      "udp_scan": 0.0
+    },
+    "E1b": {
+      "benign": 0.9933333333333333,
+      "udp_flood": 0.0,
+      "icmp_flood": 0.0,
+      "syn_flood": 0.0,
+      "http_flood": 1.0,
+      "slowrate_dos": 0.9733333333333334,
+      "syn_scan": 0.0,
+      "tcp_connect_scan": 0.9615384615384616,
+      "udp_scan": 0.0
+    },
+    "E1c": {
+      "benign": 1.0,
+      "udp_flood": 0.0,
+      "icmp_flood": 0.0,
+      "syn_flood": 0.9933333333333333,
+      "http_flood": 0.0,
+      "slowrate_dos": 0.0,
+      "syn_scan": 1.0,
+      "tcp_connect_scan": 0.0,
+      "udp_scan": 0.8468468468468469
+    },
+    "E3": {
+      "benign": 0.9933333333333333,
+      "udp_flood": 1.0,
+      "icmp_flood": 1.0,
+      "syn_flood": 0.9933333333333333,
+      "http_flood": 0.96,
+      "slowrate_dos": 0.9866666666666667,
+      "syn_scan": 0.92,
+      "tcp_connect_scan": 0.8269230769230769,
+      "udp_scan": 0.8468468468468469
+    },
+    "E4": {
+      "benign": 1.0,
+      "udp_flood": 1.0,
+      "icmp_flood": 1.0,
+      "syn_flood": 1.0,
+      "http_flood": 1.0,
+      "slowrate_dos": 0.9866666666666667,
+      "syn_scan": 0.87,
+      "tcp_connect_scan": 0.9615384615384616,
+      "udp_scan": 0.8468468468468469
+    },
+    "E2": {
+      "benign": 0.98,
+      "udp_flood": 0.5625,
+      "icmp_flood": 1.0,
+      "syn_flood": 0.9933333333333333,
+      "http_flood": 0.9666666666666667,
+      "slowrate_dos": 0.9866666666666667,
+      "syn_scan": 0.9,
+      "tcp_connect_scan": 0.8076923076923077,
+      "udp_scan": 0.8468468468468469
+    }
+  },
+  "macro_f1": {
+    "E0": 0.022622622622622622,
+    "E1a": 0.2606754743212043,
+    "E1b": 0.33681213378359565,
+    "E1c": 0.32632397130279706,
+    "E3": 0.9491711190403233,
+    "E4": 0.954826620960793,
+    "E2": 0.9069501478604833
+  },
+  "accuracy": {
+    "E0": 0.11322645290581163,
+    "E1a": 0.3777555110220441,
+    "E1b": 0.49599198396793587,
+    "E1c": 0.4939879759519038,
+    "E3": 0.9559118236472945,
+    "E4": 0.9659318637274549,
+    "E2": 0.9378757515030061
+  },
+  "blind_spot_recall": {
+    "op_a": {
+      "classes": [
+        "syn_flood",
+        "http_flood",
+        "slowrate_dos",
+        "tcp_connect_scan",
+        "udp_scan"
+      ],
+      "local": 0.0,
+      "horizon_E3": 0.9227539847539848
+    },
+    "op_b": {
+      "classes": [
+        "udp_flood",
+        "icmp_flood",
+        "syn_flood",
+        "syn_scan",
+        "udp_scan"
+      ],
+      "local": 0.0,
+      "horizon_E3": 0.952036036036036
+    },
+    "op_c": {
+      "classes": [
+        "udp_flood",
+        "icmp_flood",
+        "http_flood",
+        "slowrate_dos",
+        "tcp_connect_scan"
+      ],
+      "local": 0.0,
+      "horizon_E3": 0.9547179487179488
+    },
+    "mean": {
+      "local": 0.0,
+      "horizon_E3": 0.9431693231693231
+    }
+  },
+  "blind_spot_classes": {
+    "op_a": [
+      "syn_flood",
+      "http_flood",
+      "slowrate_dos",
+      "tcp_connect_scan",
+      "udp_scan"
+    ],
+    "op_b": [
+      "udp_flood",
+      "icmp_flood",
+      "syn_flood",
+      "syn_scan",
+      "udp_scan"
+    ],
+    "op_c": [
+      "udp_flood",
+      "icmp_flood",
+      "http_flood",
+      "slowrate_dos",
+      "tcp_connect_scan"
+    ]
+  },
+  "row_names": {
+    "E0": "Base model (E0)",
+    "E1a": "Local only: op_a (E1a)",
+    "E1b": "Local only: op_b (E1b)",
+    "E1c": "Local only: op_c (E1c)",
+    "E3": "Horizon: encrypted FL (E3)",
+    "E4": "Centralised, pooled (E4)"
+  }
+}

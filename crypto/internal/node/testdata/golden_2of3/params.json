@@ -1,0 +1,12 @@
+{
+  "log_n": 14,
+  "log_q": [
+    60,
+    60
+  ],
+  "log_scale": 114,
+  "ring_type": "ConjugateInvariant",
+  "flood_log_width": 85,
+  "stat_security": 64,
+  "params_sha256": "ed03de312c948e0daa3db64e22e195389950cbb9439e2a9ddf592436d27734b8"
+}

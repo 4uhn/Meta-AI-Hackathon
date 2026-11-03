@@ -1,0 +1,443 @@
+{
+ "n": {
+  "all": 998,
+  "k1_clean": 666,
+  "k2_clean": 410
+ },
+ "support": {
+  "all": {
+   "syn_flood": 150,
+   "http_flood": 150,
+   "icmp_flood": 103,
+   "slowrate_dos": 150,
+   "benign": 150,
+   "syn_scan": 100,
+   "tcp_connect_scan": 52,
+   "udp_scan": 111,
+   "udp_flood": 32
+  },
+  "k1_clean": {
+   "syn_flood": 136,
+   "http_flood": 150,
+   "icmp_flood": 13,
+   "slowrate_dos": 150,
+   "benign": 148,
+   "syn_scan": 22,
+   "tcp_connect_scan": 29,
+   "udp_scan": 11,
+   "udp_flood": 7
+  },
+  "k2_clean": {
+   "syn_flood": 8,
+   "http_flood": 126,
+   "icmp_flood": 1,
+   "slowrate_dos": 145,
+   "benign": 111,
+   "syn_scan": 4,
+   "tcp_connect_scan": 15,
+   "udp_scan": 0,
+   "udp_flood": 0
+  }
+ },
+ "verified_pred_sha256": {
+  "E0": true,
+  "E1a": true,
+  "E1b": true,
+  "E1c": true,
+  "E4": true,
+  "E3": true,
+  "E2": true
+ },
+ "results": {
+  "all": {
+   "E0": {
+    "accuracy": 0.07314629258517034,
+    "macro_f1": 0.0493289040391978,
+    "recall": {
+     "benign": 0.17333333333333334,
+     "udp_flood": 1.0,
+     "icmp_flood": 0.05825242718446602,
+     "syn_flood": 0.0,
+     "http_flood": 0.0,
+     "slowrate_dos": 0.0,
+     "syn_scan": 0.0,
+     "tcp_connect_scan": 0.0,
+     "udp_scan": 0.08108108108108109
+    }
+   },
+   "E1a": {
+    "accuracy": 0.374749498997996,
+    "macro_f1": 0.26594952276324296,
+    "recall": {
+     "benign": 0.9533333333333334,
+     "udp_flood": 1.0,
+     "icmp_flood": 1.0,
+     "syn_flood": 0.0,
+     "http_flood": 0.0,
+     "slowrate_dos": 0.0,
+     "syn_scan": 0.92,
+     "tcp_connect_scan": 0.07692307692307693,
+     "udp_scan": 0.0
+    }
+   },
+   "E1b": {
+    "accuracy": 0.49599198396793587,
+    "macro_f1": 0.31964678354010717,
+    "recall": {
+     "benign": 0.98,
+     "udp_flood": 0.0,
+     "icmp_flood": 0.0,
+     "syn_flood": 0.0,
+     "http_flood": 1.0,
+     "slowrate_dos": 0.98,
+     "syn_scan": 0.0,
+     "tcp_connect_scan": 0.9807692307692307,
+     "udp_scan": 0.0
+    }
+   },
+   "E1c": {
+    "accuracy": 0.48396793587174347,
+    "macro_f1": 0.3125181789426922,
+    "recall": {
+     "benign": 0.9666666666666667,
+     "udp_flood": 0.0,
+     "icmp_flood": 0.0,
+     "syn_flood": 0.9933333333333333,
+     "http_flood": 0.0,
+     "slowrate_dos": 0.0,
+     "syn_scan": 0.95,
+     "tcp_connect_scan": 0.0,
+     "udp_scan": 0.8468468468468469
+    }
+   },
+   "E4": {
+    "accuracy": 0.9679358717434869,
+    "macro_f1": 0.9594506568070221,
+    "recall": {
+     "benign": 1.0,
+     "udp_flood": 1.0,
+     "icmp_flood": 1.0,
+     "syn_flood": 0.9933333333333333,
+     "http_flood": 1.0,
+     "slowrate_dos": 0.9866666666666667,
+     "syn_scan": 0.93,
+     "tcp_connect_scan": 0.9038461538461539,
+     "udp_scan": 0.8468468468468469
+    }
+   },
+   "E3": {
+    "accuracy": 0.9348697394789579,
+    "macro_f1": 0.929834620238545,
+    "recall": {
+     "benign": 0.9866666666666667,
+     "udp_flood": 1.0,
+     "icmp_flood": 0.9902912621359223,
+     "syn_flood": 0.9933333333333333,
+     "http_flood": 0.8933333333333333,
+     "slowrate_dos": 0.9466666666666667,
+     "syn_scan": 0.92,
+     "tcp_connect_scan": 0.7692307692307693,
+     "udp_scan": 0.8468468468468469
+    }
+   },
+   "E2": {
+    "accuracy": 0.9218436873747495,
+    "macro_f1": 0.9173461134355176,
+    "recall": {
+     "benign": 0.9933333333333333,
+     "udp_flood": 1.0,
+     "icmp_flood": 0.9611650485436893,
+     "syn_flood": 0.9933333333333333,
+     "http_flood": 0.8266666666666667,
+     "slowrate_dos": 0.9333333333333333,
+     "syn_scan": 0.93,
+     "tcp_connect_scan": 0.7692307692307693,
+     "udp_scan": 0.8468468468468469
+    }
+   },
+   "blind_spot_recall": {
+    "op_a": {
+     "local": 0.015384615384615385,
+     "horizon_E3": 0.8898821898821898,
+     "centralised_E4": 0.9461386001386002
+    },
+    "op_b": {
+     "local": 0.0,
+     "horizon_E3": 0.9500942884632204,
+     "centralised_E4": 0.954036036036036
+    },
+    "op_c": {
+     "local": 0.0,
+     "horizon_E3": 0.9199044062733384,
+     "centralised_E4": 0.9781025641025641
+    },
+    "mean": {
+     "local": 0.005128205128205128,
+     "horizon_E3": 0.9199602948729163,
+     "centralised_E4": 0.9594257334257335
+    }
+   },
+   "E3_share_of_E4_macro_f1": 0.9691322984060098
+  },
+  "k1_clean": {
+   "E0": {
+    "accuracy": 0.06606606606606606,
+    "macro_f1": 0.09566091233419932,
+    "recall": {
+     "benign": 0.17567567567567569,
+     "udp_flood": 1.0,
+     "icmp_flood": 0.3076923076923077,
+     "syn_flood": 0.0,
+     "http_flood": 0.0,
+     "slowrate_dos": 0.0,
+     "syn_scan": 0.0,
+     "tcp_connect_scan": 0.0,
+     "udp_scan": 0.6363636363636364
+    }
+   },
+   "E1a": {
+    "accuracy": 0.2702702702702703,
+    "macro_f1": 0.25081325318328385,
+    "recall": {
+     "benign": 0.9594594594594594,
+     "udp_flood": 1.0,
+     "icmp_flood": 1.0,
+     "syn_flood": 0.0,
+     "http_flood": 0.0,
+     "slowrate_dos": 0.0,
+     "syn_scan": 0.8181818181818182,
+     "tcp_connect_scan": 0.0,
+     "udp_scan": 0.0
+    }
+   },
+   "E1b": {
+    "accuracy": 0.7057057057057057,
+    "macro_f1": 0.351500258515398,
+    "recall": {
+     "benign": 0.9797297297297297,
+     "udp_flood": 0.0,
+     "icmp_flood": 0.0,
+     "syn_flood": 0.0,
+     "http_flood": 1.0,
+     "slowrate_dos": 0.98,
+     "syn_scan": 0.0,
+     "tcp_connect_scan": 0.9655172413793104,
+     "udp_scan": 0.0
+    }
+   },
+   "E1c": {
+    "accuracy": 0.44594594594594594,
+    "macro_f1": 0.2023758902057523,
+    "recall": {
+     "benign": 0.972972972972973,
+     "udp_flood": 0.0,
+     "icmp_flood": 0.0,
+     "syn_flood": 1.0,
+     "http_flood": 0.0,
+     "slowrate_dos": 0.0,
+     "syn_scan": 0.7727272727272727,
+     "tcp_connect_scan": 0.0,
+     "udp_scan": 0.0
+    }
+   },
+   "E4": {
+    "accuracy": 0.9714714714714715,
+    "macro_f1": 0.8357222842413645,
+    "recall": {
+     "benign": 1.0,
+     "udp_flood": 1.0,
+     "icmp_flood": 1.0,
+     "syn_flood": 1.0,
+     "http_flood": 1.0,
+     "slowrate_dos": 0.9866666666666667,
+     "syn_scan": 0.8636363636363636,
+     "tcp_connect_scan": 0.896551724137931,
+     "udp_scan": 0.0
+    }
+   },
+   "E3": {
+    "accuracy": 0.9279279279279279,
+    "macro_f1": 0.7875480288176322,
+    "recall": {
+     "benign": 0.9864864864864865,
+     "udp_flood": 1.0,
+     "icmp_flood": 0.9230769230769231,
+     "syn_flood": 1.0,
+     "http_flood": 0.8933333333333333,
+     "slowrate_dos": 0.9466666666666667,
+     "syn_scan": 0.7727272727272727,
+     "tcp_connect_scan": 0.8275862068965517,
+     "udp_scan": 0.0
+    }
+   },
+   "E2": {
+    "accuracy": 0.9114114114114115,
+    "macro_f1": 0.7756344960040065,
+    "recall": {
+     "benign": 0.9932432432432432,
+     "udp_flood": 1.0,
+     "icmp_flood": 0.8461538461538461,
+     "syn_flood": 1.0,
+     "http_flood": 0.8266666666666667,
+     "slowrate_dos": 0.9333333333333333,
+     "syn_scan": 0.8181818181818182,
+     "tcp_connect_scan": 0.8275862068965517,
+     "udp_scan": 0.0
+    }
+   },
+   "blind_spot_recall": {
+    "op_a": {
+     "local": 0.0,
+     "horizon_E3": 0.7335172413793103,
+     "centralised_E4": 0.7766436781609196
+    },
+    "op_b": {
+     "local": 0.0,
+     "horizon_E3": 0.7391608391608392,
+     "centralised_E4": 0.7727272727272727
+    },
+    "op_c": {
+     "local": 0.0,
+     "horizon_E3": 0.9181326259946949,
+     "centralised_E4": 0.9766436781609196
+    },
+    "mean": {
+     "local": 0.0,
+     "horizon_E3": 0.7969369021782814,
+     "centralised_E4": 0.842004876349704
+    }
+   },
+   "E3_share_of_E4_macro_f1": 0.9423561435035048
+  },
+  "k2_clean": {
+   "E0": {
+    "accuracy": 0.06341463414634146,
+    "macro_f1": 0.06868925663251904,
+    "recall": {
+     "benign": 0.22522522522522523,
+     "udp_flood": NaN,
+     "icmp_flood": 1.0,
+     "syn_flood": 0.0,
+     "http_flood": 0.0,
+     "slowrate_dos": 0.0,
+     "syn_scan": 0.0,
+     "tcp_connect_scan": 0.0,
+     "udp_scan": NaN
+    }
+   },
+   "E1a": {
+    "accuracy": 0.2634146341463415,
+    "macro_f1": 0.11404390816155524,
+    "recall": {
+     "benign": 0.9459459459459459,
+     "udp_flood": NaN,
+     "icmp_flood": 1.0,
+     "syn_flood": 0.0,
+     "http_flood": 0.0,
+     "slowrate_dos": 0.0,
+     "syn_scan": 0.5,
+     "tcp_connect_scan": 0.0,
+     "udp_scan": NaN
+    }
+   },
+   "E1b": {
+    "accuracy": 0.9560975609756097,
+    "macro_f1": 0.40649088657078175,
+    "recall": {
+     "benign": 0.972972972972973,
+     "udp_flood": NaN,
+     "icmp_flood": 0.0,
+     "syn_flood": 0.0,
+     "http_flood": 1.0,
+     "slowrate_dos": 0.9862068965517241,
+     "syn_scan": 0.0,
+     "tcp_connect_scan": 1.0,
+     "udp_scan": NaN
+    }
+   },
+   "E1c": {
+    "accuracy": 0.2951219512195122,
+    "macro_f1": 0.1550717608808895,
+    "recall": {
+     "benign": 1.0,
+     "udp_flood": NaN,
+     "icmp_flood": 0.0,
+     "syn_flood": 1.0,
+     "http_flood": 0.0,
+     "slowrate_dos": 0.0,
+     "syn_scan": 0.5,
+     "tcp_connect_scan": 0.0,
+     "udp_scan": NaN
+    }
+   },
+   "E4": {
+    "accuracy": 0.9951219512195122,
+    "macro_f1": 0.7574968906493679,
+    "recall": {
+     "benign": 1.0,
+     "udp_flood": NaN,
+     "icmp_flood": 1.0,
+     "syn_flood": 1.0,
+     "http_flood": 1.0,
+     "slowrate_dos": 0.993103448275862,
+     "syn_scan": 0.75,
+     "tcp_connect_scan": 1.0,
+     "udp_scan": NaN
+    }
+   },
+   "E3": {
+    "accuracy": 0.9292682926829269,
+    "macro_f1": 0.5574482480089527,
+    "recall": {
+     "benign": 0.9819819819819819,
+     "udp_flood": NaN,
+     "icmp_flood": 0.0,
+     "syn_flood": 1.0,
+     "http_flood": 0.873015873015873,
+     "slowrate_dos": 0.9517241379310345,
+     "syn_scan": 0.25,
+     "tcp_connect_scan": 1.0,
+     "udp_scan": NaN
+    }
+   },
+   "E2": {
+    "accuracy": 0.9073170731707317,
+    "macro_f1": 0.5703113666938723,
+    "recall": {
+     "benign": 0.990990990990991,
+     "udp_flood": NaN,
+     "icmp_flood": 0.0,
+     "syn_flood": 1.0,
+     "http_flood": 0.8015873015873016,
+     "slowrate_dos": 0.9379310344827586,
+     "syn_scan": 0.5,
+     "tcp_connect_scan": 1.0,
+     "udp_scan": NaN
+    }
+   },
+   "blind_spot_recall": {
+    "op_a": {
+     "local": 0.0,
+     "horizon_E3": 0.9561850027367269,
+     "centralised_E4": 0.9982758620689656
+    },
+    "op_b": {
+     "local": 0.0,
+     "horizon_E3": 0.4166666666666667,
+     "centralised_E4": 0.9166666666666666
+    },
+    "op_c": {
+     "local": 0.0,
+     "horizon_E3": 0.7061850027367269,
+     "centralised_E4": 0.9982758620689656
+    },
+    "mean": {
+     "local": 0.0,
+     "horizon_E3": 0.6930122240467069,
+     "centralised_E4": 0.9710727969348659
+    }
+   },
+   "E3_share_of_E4_macro_f1": 0.7359082986216319
+  }
+ }
+}

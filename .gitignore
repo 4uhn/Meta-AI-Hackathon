@@ -1,0 +1,61 @@
+# Data, models and run artefacts are never committed. Root-anchored ("/data/") so the source
+# package horizon/data/ is not matched.
+/data/
+/runs/
+/models/
+*.safetensors
+*.bin
+*.f64
+*.npy
+*.gguf
+*.pt
+*.ckpt
+
+# Secrets and credentials: never committed, whatever the folder
+.env
+.env.*
+*.env
+**/secret/
+*.pem
+*.key
+*.p12
+id_rsa*
+id_ed25519*
+id_ecdsa*
+.netrc
+token.json
+*credentials*.json
+client_secret*.json
+hf_token
+*.token
+
+# Modal CLI credentials and locally installed agent skills
+.modal.toml
+.agents/
+
+# Release builds and archives
+/dist/
+*.tar.gz
+*.tgz
+*.zip
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.code-workspace
+*.swp
+
+# Build / tooling
+crypto/bin/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+build/
+*.log
+
+# OS
+.DS_Store

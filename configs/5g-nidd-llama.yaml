@@ -1,0 +1,35 @@
+# Dev model (Llama-3.2-1B) on Modal. The training recipe was tuned here and is reused unchanged by the
+# Glimmer configs. bf16 base weights on CUDA; PEFT keeps the adapter in fp32.
+model:
+  id: meta-llama/Llama-3.2-1B-Instruct
+  revision: 9213176726f574b556790deb65791e0c5aa438b6   # pinned commit
+  dtype: bfloat16
+  device: cuda
+lora:
+  r: 8
+  alpha: 16
+  target_modules: [q_proj, k_proj, v_proj, o_proj]
+train:
+  lr: 5.0e-4
+  batch_size: 16          # effective batch = micro_batch × grad_accum
+  micro_batch: 8
+  local_epochs: 0.5       # 6 rounds × ½ epoch = same compute as 3 rounds × 1 epoch
+  rounds: 6
+  seed: 1234
+  adapter_seed: 4321
+  restrict_missing_labels: true    # FedRS-style: local loss ignores labels absent from the shard
+  logit_adjust_tau: 1.0   # local logit adjustment by the shard's label prior (0 = off)
+fl:
+  server_lr: 1.0          # η_s on the decrypted aggregate; 1.0 = plain FedAvg
+data_dir: data/processed  # replaced inside each container by its own mounted shard / test set
+results_dir: results/5g-nidd-llama
+eval:
+  batch_flows: 8          # × 9 label continuations = 72 sequences per forward
+  every_round: true
+  split: test             # test = evaluator on the test set; val = federated validation (tuning only)
+modal:
+  gpu: A10                # one GPU type for every dev run: E2 ≡ E3 needs identical hardware
+  cpu: 2
+  memory_mb: 12288
+  timeout_s: 1800         # per container; generous, a round of local training takes a few minutes
+  require_device: auto    # gpu: A10 can land on an A10 or A10G (different kernels): the first fixes the run

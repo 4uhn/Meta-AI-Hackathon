@@ -1,0 +1,86 @@
+{
+  "exp": "E1c",
+  "model": "unsloth/Muse-Glimmer-30B-unsloth-bnb-4bit",
+  "revision": "ecedda395d4d099b477d135a9a573eedaa5a7aad",
+  "epochs": 3.0,
+  "layout_hash": "b70279f42d0d61b57e5da9a0394266988bd7ad8de5bd9ff9148b41d97203bc7d",
+  "a_hash": "52ab8e6ef455d7565184ecab17f377ad7e2e8eb1ce447f0af40c27d1e95713a3",
+  "lr": 0.0005,
+  "dtype": "bfloat16",
+  "smoke": false,
+  "train": {
+    "steps": 222,
+    "n": 1182,
+    "loss_first": 1.1302414238452911,
+    "loss_last": 0.01108269727556035,
+    "ms": 833109,
+    "ms_per_step": 3752,
+    "mps_peak_gb": 0.0,
+    "cuda_peak_gb": 23.91
+  },
+  "b_max_abs": 0.04033924639225006,
+  "metrics": {
+    "accuracy": 0.4939879759519038,
+    "macro_f1": 0.32632397130279706,
+    "per_class": {
+      "benign": {
+        "recall": 1.0,
+        "precision": 0.30120481927710846,
+        "f1": 0.462962962962963,
+        "support": 150
+      },
+      "udp_flood": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "support": 32
+      },
+      "icmp_flood": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "support": 103
+      },
+      "syn_flood": {
+        "recall": 0.9933333333333333,
+        "precision": 1.0,
+        "f1": 0.9966555183946488,
+        "support": 150
+      },
+      "http_flood": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "support": 150
+      },
+      "slowrate_dos": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "support": 150
+      },
+      "syn_scan": {
+        "recall": 1.0,
+        "precision": 0.38910505836575876,
+        "f1": 0.5602240896358543,
+        "support": 100
+      },
+      "tcp_connect_scan": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "support": 52
+      },
+      "udp_scan": {
+        "recall": 0.8468468468468469,
+        "precision": 1.0,
+        "f1": 0.9170731707317074,
+        "support": 111
+      }
+    },
+    "eval_ms": 666289,
+    "mps_peak_gb": 0.0
+  },
+  "n_test": 998,
+  "pred_sha256": "17efcca0a38aa310a336a631805e863c9a47188e824a21bbb240cef2b7f60e06"
+}

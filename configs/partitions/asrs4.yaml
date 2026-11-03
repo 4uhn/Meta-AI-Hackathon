@@ -1,0 +1,38 @@
+# NASA ASRS incident narratives, four organisations: the three of configs/partitions/asrs.yaml plus
+# business aviation (corporate, fractional and air-taxi operators) appended as op_d. Same seed and
+# order, so the op_a/b/c shards come out byte-identical to data/asrs/; the test set is the same reports
+# (checked as a set), copied byte-identical from data/asrs/test.jsonl. Output under data/asrs4/.
+# `python -m horizon.data.asrs --config configs/partitions/asrs4.yaml`.
+task: asrs
+# NASA ASRS (a US Government work) as exported by ASRS DBOnline, mirrored on the HF Hub (pinned):
+raw_source: hf://datasets/sookiemonster/asrs-narratives@d3820b6561b1946bb91a00bab24316e1d62a990a/flattened.csv
+raw_csv: ~/horizon-data/raw/asrs/flattened.csv
+raw_sha256: dc03bf6674d6a4bb5902df7eb7f43365ca7d57d5fcd478a19ebf408a09db0adf
+out_dir: data/asrs4
+test_from: data/asrs/test.jsonl
+seed: 1234
+operators:                     # ASRS field Person_1_Reporter_Organization
+  op_a: {name: airline, reporter_orgs: [Air Carrier]}
+  op_b: {name: air_traffic_control, reporter_orgs: [Government]}    # en-route/approach/tower controllers
+  op_c: {name: general_aviation, reporter_orgs: [Personal, FBO]}
+  op_d: {name: business_aviation, reporter_orgs: [Corporate, Fractional, Air Taxi]}
+# Event classes: ASRS "Events | Anomaly" items (prefix match). Only reports with exactly one of these
+# classes are used (ASRS is multi-label; generic items such as procedural deviations are ignored).
+classes:
+  equipment_failure: ["Aircraft Equipment Problem"]
+  traffic_conflict: ["Conflict NMAC", "Conflict Airborne Conflict"]
+  ground_conflict: ["Conflict Ground Conflict"]
+  turbulence: ["Inflight Event / Encounter Weather / Turbulence", "Inflight Event / Encounter Wake Vortex Encounter"]
+  terrain_warning: ["Inflight Event / Encounter CFTT / CFIT"]
+  airspace_violation: ["Airspace Violation"]
+  loss_of_control: ["Inflight Event / Encounter Loss Of Aircraft Control", "Ground Event / Encounter Loss Of Aircraft Control"]
+  hazmat: ["Deviation / Discrepancy - Procedural Hazardous Material Violation"]
+  passenger_misconduct: ["Flight Deck / Cabin / Aircraft Event Passenger Misconduct"]
+max_words: 200                 # narrative truncated to its first 200 words (median report: 202); a
+                               # class's key term first appears after the cut in ≤ 12% of reports
+near_dup_shingle: 5            # word n-grams (lowercased) for the near-duplicate guard
+near_dup_jaccard: 0.5          # a pool report this similar to any test report never enters a shard
+test_per_class: 100            # drawn first, from every reporter organisation
+cap_per_class: 300             # per organisation (train + val)
+min_per_class: 25              # an organisation with fewer reports of a class does not hold it
+val_fraction: 0.10

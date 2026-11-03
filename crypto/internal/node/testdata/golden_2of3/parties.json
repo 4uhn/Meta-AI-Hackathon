@@ -1,0 +1,17 @@
+{
+  "threshold": 2,
+  "parties": [
+    {
+      "name": "op_a",
+      "point": 1
+    },
+    {
+      "name": "op_b",
+      "point": 2
+    },
+    {
+      "name": "op_c",
+      "point": 3
+    }
+  ]
+}

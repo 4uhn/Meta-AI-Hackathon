@@ -1,0 +1,84 @@
+{
+  "exp": "E1b",
+  "model": "meta-llama/Llama-3.2-1B-Instruct",
+  "revision": "9213176726f574b556790deb65791e0c5aa438b6",
+  "epochs": 3.0,
+  "layout_hash": "c39fe4f640a6ebc959543c82685c2d489ed36bdb7211f51ada47bc1cd2da5e47",
+  "a_hash": "c6b0dfd6a7f2412b158b9ac3fb930146e2cc7c522f035e57c58a90fe5454ebec",
+  "lr": 0.0005,
+  "dtype": "bfloat16",
+  "smoke": false,
+  "train": {
+    "steps": 255,
+    "n": 1352,
+    "loss_last": 0.031145941489376126,
+    "ms": 94864,
+    "ms_per_step": 372,
+    "mps_peak_gb": 0.0
+  },
+  "b_max_abs": 0.10297884047031403,
+  "metrics": {
+    "accuracy": 0.49599198396793587,
+    "macro_f1": 0.31964678354010717,
+    "per_class": {
+      "benign": {
+        "recall": 0.98,
+        "precision": 0.532608695652174,
+        "f1": 0.6901408450704226,
+        "support": 150
+      },
+      "udp_flood": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "support": 32
+      },
+      "icmp_flood": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "support": 103
+      },
+      "syn_flood": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "support": 150
+      },
+      "http_flood": {
+        "recall": 1.0,
+        "precision": 0.974025974025974,
+        "f1": 0.9868421052631579,
+        "support": 150
+      },
+      "slowrate_dos": {
+        "recall": 0.98,
+        "precision": 0.9865771812080537,
+        "f1": 0.9832775919732442,
+        "support": 150
+      },
+      "syn_scan": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "support": 100
+      },
+      "tcp_connect_scan": {
+        "recall": 0.9807692307692307,
+        "precision": 0.12171837708830549,
+        "f1": 0.2165605095541401,
+        "support": 52
+      },
+      "udp_scan": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "support": 111
+      }
+    },
+    "eval_ms": 78363,
+    "mps_peak_gb": 0.0
+  },
+  "n_test": 998,
+  "pred_sha256": "68c105e866b0764e7b226d7123ebe591285954283ad0e2388024497588f55b28"
+}

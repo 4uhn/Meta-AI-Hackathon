@@ -1,0 +1,36 @@
+# A new task defined entirely in the config: no code changes. Run it locally with the tiny model:
+#   python examples/custom-dataset/make_toy_data.py
+#   python -m horizon.model.tiny --out models/tiny
+#   python -m horizon.fl.run --config examples/custom-dataset/config.yaml --mode encrypted --fresh \
+#       --run-root runs/examples/custom-dataset/runs --out runs/examples/custom-dataset/results
+task:
+  name: support_tickets              # lowercase letters, digits, _ (also names the Modal volumes)
+  labels: [billing, outage, account, shipping]
+  instructions: "You are a support analyst. Classify the customer ticket by its topic."
+  # verbalizer: {outage: service_outage}   # optional: the text the model answers with, per label
+model:                               # for a real model, copy model/lora/train/eval/modal from configs/5g-nidd-glimmer.yaml
+  id: models/tiny
+  revision: main
+  dtype: float32
+  device: cpu
+lora:
+  r: 8
+  alpha: 16
+  target_modules: [q_proj, k_proj, v_proj, o_proj]
+train:
+  lr: 1.0e-3
+  batch_size: 4
+  micro_batch: 2
+  local_epochs: 1
+  rounds: 3
+  seed: 1234
+  adapter_seed: 4321
+  restrict_missing_labels: true      # restricted softmax: leaves out labels this organisation doesn't hold
+fl:
+  operators: [op_a, op_b, op_c]      # one directory per organisation under data_dir
+  threshold: 2                       # any 2 of the 3 decrypt each round's sum
+data_dir: runs/examples/custom-dataset/data
+results_dir: runs/examples/custom-dataset/results
+eval:
+  batch_flows: 4
+  every_round: true

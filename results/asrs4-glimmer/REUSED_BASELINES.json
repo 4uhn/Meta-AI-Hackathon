@@ -1,0 +1,26 @@
+{
+  "reused_from": "results/asrs-glimmer",
+  "experiments": [
+    "E0",
+    "E1a",
+    "E1b",
+    "E1c"
+  ],
+  "why": "data/asrs4 op_a/b/c shards and test.jsonl are byte-identical to data/asrs (same recipe, same compute), so these baselines are the same experiments",
+  "sha256": {
+    "op_a/train.jsonl": "ebb9a2f77f5547c554e05cdc7b1a3a4c7f3e7e786326dcf4964b6b7e31411c3e",
+    "op_a/val.jsonl": "4d3fd6e7c1dc7d395fcdc72cf692c3dd2dd65f6f7a740aa78502830ac62c7d49",
+    "op_b/train.jsonl": "60e9ddf028d34a343e6ec5522d9a1344081ab98f44c59a566c1b2dabbf501785",
+    "op_b/val.jsonl": "65ced8a406fd043855ad5402da16acd3dc485cf12d21218ac700673d5cd92944",
+    "op_c/train.jsonl": "857219ef88323036f84aca7d72a6ad64f6993954b42797dbbfa64a7a6f8ca604",
+    "op_c/val.jsonl": "42c3d27659655a652a92eb3d43cedeff27b20587d975dbb55a2808bafcd356ce",
+    "test.jsonl": "bac2c27092192af9ff755d2039cdec58b5b384e3ca4967b20ce89aa6af333b95"
+  },
+  "identical_to_data_asrs": true,
+  "json_sha256": {
+    "E0": "e4e6d8291cbd44aea3a20e0be6b821543221a6a9b175c62b1a07c6b279c90c12",
+    "E1a": "c8ac5681044ac60158633e171902f1a428a6afc4fa739275a3fb87f069060c6e",
+    "E1b": "3258c862e454b80e5bd5b9448abe3203f13a05d0a1add908d0330351f3d1a52b",
+    "E1c": "0ddc31b6f8ebbe854ce40cbd04d36b87285aec3e80d5d222aab3bc829e471553"
+  }
+}

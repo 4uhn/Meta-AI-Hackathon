@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use Horizon, please cite it as below."
+title: "Horizon: federated LoRA fine-tuning with t-of-N threshold-encrypted aggregation"
+type: software
+authors:
+  - given-names: Jacob
+    family-names: Chau
+version: 0.1.0
+date-released: 2026-11-04
+license: Apache-2.0
+repository-code: "https://github.com/4uhn/Meta-AI-Hackathon"
+keywords:
+  - federated learning
+  - homomorphic encryption
+  - threshold cryptography
+  - CKKS
+  - LoRA
+  - Muse Glimmer

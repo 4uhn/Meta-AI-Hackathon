@@ -1,0 +1,187 @@
+{
+  "suite": "glimmer",
+  "smoke": false,
+  "framing": "empirical membership-inference measurement on the shared final model, not a privacy guarantee; experimenter-side (one container reads all three shards, like E4); loss on label tokens only, so text extraction does not apply",
+  "attacks": {
+    "loss": "true-label full-label log-prob under the target model",
+    "reference": "same minus the base model's (E0, no adapter) score on the same row"
+  },
+  "selection": {
+    "cells": {
+      "benign": {
+        "members_available": 1603,
+        "nonmembers_available": 148,
+        "used": 67
+      },
+      "http_flood": {
+        "members_available": 357,
+        "nonmembers_available": 150,
+        "used": 68
+      },
+      "icmp_flood": {
+        "members_available": 29,
+        "nonmembers_available": 13,
+        "used": 6
+      },
+      "slowrate_dos": {
+        "members_available": 360,
+        "nonmembers_available": 150,
+        "used": 67
+      },
+      "syn_flood": {
+        "members_available": 325,
+        "nonmembers_available": 136,
+        "used": 61
+      },
+      "syn_scan": {
+        "members_available": 45,
+        "nonmembers_available": 22,
+        "used": 10
+      },
+      "tcp_connect_scan": {
+        "members_available": 51,
+        "nonmembers_available": 29,
+        "used": 13
+      },
+      "udp_flood": {
+        "members_available": 6,
+        "nonmembers_available": 7,
+        "used": 3
+      },
+      "udp_scan": {
+        "members_available": 21,
+        "nonmembers_available": 11,
+        "used": 5
+      }
+    },
+    "n_per_side": 300,
+    "seed": 2026,
+    "selection_sha256": "bcef7cc29db71d60055726ba5a2ad2fd4b3325dbc4f66d065132318586251ff9"
+  },
+  "targets": {
+    "E3": "runs/modal_glimmer_E3/bus/round_7/global/adapter",
+    "E4": "runs/modal_glimmer_baselines/dev_E4/adapter"
+  },
+  "results": {
+    "E3": {
+      "loss": {
+        "auc": 0.5048555555555555,
+        "tpr_at_0.01_fpr": 0.02,
+        "ci95": {
+          "auc": [
+            0.4594302777777778,
+            0.5498566666666667
+          ],
+          "tpr_at_0.01_fpr": [
+            0.006666666666666667,
+            0.05
+          ]
+        }
+      },
+      "reference": {
+        "auc": 0.4975,
+        "tpr_at_0.01_fpr": 0.006666666666666667,
+        "ci95": {
+          "auc": [
+            0.4501616666666667,
+            0.54228
+          ],
+          "tpr_at_0.01_fpr": [
+            0.0,
+            0.023333333333333334
+          ]
+        }
+      },
+      "mean_true_label_logprob": {
+        "member": -0.1186208013887396,
+        "nonmember": -0.11793626434856075
+      }
+    },
+    "E4": {
+      "loss": {
+        "auc": 0.5047666666666667,
+        "tpr_at_0.01_fpr": 0.013333333333333334,
+        "ci95": {
+          "auc": [
+            0.45666555555555555,
+            0.5522336111111111
+          ],
+          "tpr_at_0.01_fpr": [
+            0.0,
+            0.03666666666666667
+          ]
+        }
+      },
+      "reference": {
+        "auc": 0.49956666666666666,
+        "tpr_at_0.01_fpr": 0.006666666666666667,
+        "ci95": {
+          "auc": [
+            0.45200749999999995,
+            0.5441330555555555
+          ],
+          "tpr_at_0.01_fpr": [
+            0.0,
+            0.02666666666666667
+          ]
+        }
+      },
+      "mean_true_label_logprob": {
+        "member": -0.07975870328971117,
+        "nonmember": -0.0807476670555161
+      }
+    },
+    "base_only": {
+      "loss": {
+        "auc": 0.49974444444444444,
+        "tpr_at_0.01_fpr": 0.0,
+        "ci95": {
+          "auc": [
+            0.4543697222222222,
+            0.5482844444444444
+          ],
+          "tpr_at_0.01_fpr": [
+            0.0,
+            0.013333333333333334
+          ]
+        }
+      }
+    }
+  },
+  "cross_check_vs_saved_test_scores": {
+    "E3": {
+      "n": 300,
+      "argmax_agreement": 1.0,
+      "max_abs_diff": 0.35651111602783203,
+      "median_abs_diff": 0.0
+    },
+    "E4": {
+      "n": 300,
+      "argmax_agreement": 1.0,
+      "max_abs_diff": 0.3008708953857422,
+      "median_abs_diff": 0.0
+    },
+    "base": {
+      "n": 300,
+      "argmax_agreement": 1.0,
+      "max_abs_diff": 0.2099781036376953,
+      "median_abs_diff": 0.0
+    }
+  },
+  "score_sha256": {
+    "base": "9569580f915ed4b54f0a48547952f5a5ba209344e2dbd9d83ffa1ab57e8c1ab9",
+    "E3": "e1afeb7dcc40effe3bdce9dafbf6e7ceb5768d6dfb22106b8ceb072307ea7ede",
+    "E4": "b0a2581aaa52e672b92a53c3637ec126d290a185cfcfbd628dafcad60d7cecf3"
+  },
+  "seconds": {
+    "base": 342.7,
+    "E3": 386.7,
+    "E4": 386.4
+  },
+  "cuda_peak_gb": 23.69,
+  "modal": {
+    "device": "NVIDIA L40S",
+    "wall_s": 1151.2,
+    "est_usd": 0.7659
+  }
+}

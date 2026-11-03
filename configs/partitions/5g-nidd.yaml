@@ -1,0 +1,15 @@
+# 5G-NIDD: label-skew partition over three operators, each seeing different attack families.
+# Seeded; output under data/processed/.
+raw_csv: ~/horizon-data/raw/Combined.csv
+raw_sha256: fa36f80859585f474504ca69eb951a079b35145537976c86b00aae3aab46ee59
+out_dir: data/processed
+seed: 1234
+operators:
+  op_a: [benign, udp_flood, icmp_flood, syn_scan]
+  op_b: [benign, http_flood, slowrate_dos, tcp_connect_scan]
+  op_c: [benign, syn_flood, udp_scan, syn_scan]
+benign_per_operator: 600
+attack_per_class: 400       # cap per operator
+val_fraction: 0.10          # held out of each shard
+test_per_class: 150
+test_max_share: 0.34        # a rare class gives at most this share of its unique strings to test
